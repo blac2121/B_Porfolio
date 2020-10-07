@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Layout from './shared/Layout';
+import Layout from '../shared/Layout';
 import styled from 'styled-components';
+import FeaturedCard from './FeaturedCard'
 
 const ProjectsBody = styled.div`
   display: flex;
@@ -63,28 +64,6 @@ const SectionSubHeadings = styled.p`
   font-size: 24px;
 `
 
-const BikeCoverPhoto = styled.img`
-  width: 100%;
-  height: 200px;
-`
-const WorkingItCoverPhoto = styled.img`
-  width: 100%;
-  height: 200px;
-`
-
-const ProjectDetailContainer = styled.div`
-  margin: 15px;
-`
-
-const ProjectTitles = styled.h4`
-  font-size: 24px;
-  color: #393B45;
-`
-
-const ProjectText = styled.p`
-  font-size: 18px;
-  color: #393B45;
-`
 
 const Projects = () => { 
   const [projects, setProjects] = useState([]);
@@ -103,6 +82,18 @@ const Projects = () => {
     getProjects();
   }, [fetchEntries]);
 
+  const featuredCardJSX = projects.map((project, index) => (
+    <FeaturedCard
+      key={index}
+      link={project.fields.link}
+      title={project.fields.title}
+      image={project.fields.image}
+      tech={project.fields.tech}
+      highlight={project.fields.highlight}
+      id={project.id}
+    />
+  ));
+
   return (
     <Layout>
       <ProjectsBody>
@@ -116,16 +107,7 @@ const Projects = () => {
             <SectionSubHeadings>The following were designed and built by me</SectionSubHeadings>  
           </SectionHeadingContainer>
           <ProjectsFeaturedContainer>
-            <ProjectContainers>
-              <a href="https://blac2121.github.io/Bike_Route_Finder/" target="_blank">         
-                <ProjectDetailContainer>
-                  <div><BikeCoverPhoto src="https://i.imgur.com/3e2JiwP.png"/></div>
-                  <div><ProjectTitles>Trailblaze: Discover your Next Bike Route</ProjectTitles></div>                        
-                  <div><ProjectText>Tech Stack: HTML5, CSS, JavaScript, Axios</ProjectText></div>                          
-                  <div><ProjectText>Highlights: Connecting to an API, filtering multiple values, sorting</ProjectText></div> 
-                </ProjectDetailContainer>
-              </a>
-            </ProjectContainers>         
+            {featuredCardJSX}     
           </ProjectsFeaturedContainer>  
         </ProjectsFeaturedPanel>
         <ProjectsFeaturedPanel>

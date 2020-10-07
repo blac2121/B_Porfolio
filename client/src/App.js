@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from '../src/components/Home';
 import Library from '../src/components/Library';
-import Projects from '../src/components/Projects';
+import Projects from '../src/components/projects/Projects';
 import styled from 'styled-components';
 
 
