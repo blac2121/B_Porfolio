@@ -1,1 +1,9 @@
+body {
+  background-color: #393B45;
+  color: #D8D9DE;
+}
 
+
+a:link {
+  text-decoration: none;
+}
