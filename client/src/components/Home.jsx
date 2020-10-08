@@ -107,7 +107,7 @@ const Home = () => {
         <Title>Skills</Title>
         <CarouselContainer>
           <Carousel itemsToShow={4}>
-            <IconReact width={10} height={10}/>
+            <i className="devicon-react-original-wordmark"></i>
             <p>2</p>
             <p>3</p>
             <p>4</p>
