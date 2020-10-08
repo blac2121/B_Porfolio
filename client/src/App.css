@@ -1,9 +1,27 @@
 body {
   background-color: #EEEEF2;
-  color: #86837B;
+  color: #4A4C4B;
 }
 
 
 a:link {
   text-decoration: none;
+}
+
+button.rec-dot {
+  background-color: #9AB1A9;
+  box-shadow: 0 0 1px 3px #7F9D92;
+}
+
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+  box-shadow: 0 0 1px 3px #7F9D92;
+}
+
+.devicon-react-original-wordmark {
+  width: 100px;
+}
+
+/* if you want to change the original color */
+.devicon-react-original-wordmark path {
+  fill: #4691f6;
 }

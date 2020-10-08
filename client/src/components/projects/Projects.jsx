@@ -6,30 +6,6 @@ import FeaturedCard from './FeaturedCard';
 import PracticeCard from './PracticeCard';
 
 
-// const Main = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   margin: 10px auto;
-//   width: 80vw;
-// `
-
-// const SectionPanel = styled.div`
-//   border-radius: 3px; 
-//   margin: 50px;
-//   border: 1px solid #9AB1A9;
-// `
-
-// const SectionHeading = styled.h4`
-//   font-size: 36px;
-//   color: #4A4C4B;
-//   margin: 50px;
-// `
-
-// const Cards = styled.div`
-//   display: flex;
-//   margin: 50px;
-// `
-
 const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,11 +13,23 @@ const Main = styled.div`
   width: 80vw;
 `
 
-const SectionPanel = styled.div`
+const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 3px; 
   margin: 50px;
+  border: 1px solid #9AB1A9;
+`
+
+const PracticePanel = styled.div`
+  display: flex;
+  border-radius: 3px; 
+  border: 1px solid #9AB1A9;
+`
+
+const PracticePanelMain = styled.div`
+  display: flex;
+  border-radius: 3px; 
   border: 1px solid #9AB1A9;
 `
 
@@ -54,6 +42,11 @@ const SectionHeading = styled.h4`
 const Cards = styled.div`
   display: flex;
   flex-direction: column;
+`
+
+const PracticeCards = styled.div`
+  display: flex;
+  flex-wrap: wrap;
 `
 
 const Projects = () => { 
@@ -113,14 +106,16 @@ const Projects = () => {
   return (
     <Layout>
       <Main>
-        <SectionPanel>
+        <FeaturedPanel>
           <SectionHeading>Featured Projects</SectionHeading>
           <Cards>{featuredCardJSX}</Cards>         
-        </SectionPanel>
-        <SectionPanel>       
-          <SectionHeading>Practice Projects Makes Perfect</SectionHeading>          
-          <Cards>{practiceCardJSX}</Cards>  
-        </SectionPanel>
+        </FeaturedPanel>
+        <PracticePanel>       
+          <SectionHeading>Practice Projects Makes Perfect</SectionHeading>
+          <PracticePanelMain>
+            <PracticeCards>{practiceCardJSX}</PracticeCards>
+          </PracticePanelMain>                  
+        </PracticePanel>
       </Main>  
     </Layout>
   )
