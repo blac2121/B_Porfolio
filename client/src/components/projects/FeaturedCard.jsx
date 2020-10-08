@@ -13,15 +13,6 @@ const ProjectContainers = styled.div`
   }
 `
 
-const CoverPhotoContainer = styled.div`
-  display: flex;
-  flex-grow: 1;
-`
-
-const CoverPhoto = styled.img`
-  width: 100%;
-`
-
 const ProjectDetailContainer = styled.div`
   flex-grow: 3;
   margin: 15px;
@@ -46,9 +37,6 @@ const Featured = (props) => {
   return (   
     <a href={props.link} target="_blank">
       <ProjectContainers>
-        {/* <CoverPhotoContainer>
-          <CoverPhoto src={props.image} />
-        </CoverPhotoContainer>          */}
         <ProjectDetailContainer>         
           <ProjectTitles>{props.title}</ProjectTitles> 
           <ProjectLabels>Tech Stack</ProjectLabels>
