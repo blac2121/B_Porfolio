@@ -2,71 +2,43 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Layout from '../shared/Layout';
 import styled from 'styled-components';
-import FeaturedCard from './FeaturedCard'
+import FeaturedCard from './FeaturedCard';
+import PracticeCard from './PracticeCard';
 
-const ProjectsBody = styled.div`
+
+const Main = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 10px auto;
   width: 80vw;
 `
 
-const ProjectsHeader = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 20px auto;
-  width: 80vw;
+const Title = styled.h3`
+  font-size: 42px;
+  margin-bottom: 20px;
 `
 
-const ProjectsTitle = styled.h3`
+const SectionPanel = styled.div`
+  border-radius: 3px; 
+  margin: 50px;
+  background-color: #9AB1A9;
+`
+
+const SectionHeading = styled.h4`
   font-size: 36px;
-`
-
-const ProjectsSubTitle = styled.p`
-  font-size: 24px;
-`
-
-const ProjectsFeaturedPanel = styled.div`
-  background-color: #6E7889;
-  border: 1px solid gray;
-  border-radius: 2px; 
+  color: #EEEEF2;
   margin: 50px;
 `
 
-const ProjectsFeaturedContainer = styled.div`
+const Cards = styled.div`
   display: flex;
   margin: 50px;
 `
-
-const ProjectContainers = styled.div`
-  width: 450px;
-  height: 450px;
-  border: 1px solid gray;
-  border-radius: 3px;
-  margin: 50px;
-  background-color: #D8D9DE;
-  box-shadow: 2px 2px 5px 2px #393B45;
-
-
-  :hover {
-    transform: scale(1.03);
-  }
-`
-const SectionHeadingContainer = styled.div`
-  margin: 30px;
-`
-
-const SectionHeadings = styled.h4`
-  font-size: 28px;
-`
-
-const SectionSubHeadings = styled.p`
-  font-size: 24px;
-`
-
 
 const Projects = () => { 
   const [projects, setProjects] = useState([]);
+  const [featured, setFeatured] = useState([]);
+  const [practice, setPractice] = useState([]);
   const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
@@ -82,7 +54,12 @@ const Projects = () => {
     getProjects();
   }, [fetchEntries]);
 
-  const featuredCardJSX = projects.map((project, index) => (
+  useEffect(() => {
+    const featuredProjects = projects.filter((element) => element.fields.type === "featured")
+    setFeatured(featuredProjects);
+  }, [projects]);
+    
+  const featuredCardJSX = featured.map((project, index) => (
     <FeaturedCard
       key={index}
       link={project.fields.link}
@@ -90,34 +67,41 @@ const Projects = () => {
       image={project.fields.image}
       tech={project.fields.tech}
       highlight={project.fields.highlight}
+      github={project.fields.github}
+      id={project.id}
+    />
+  ));
+
+  useEffect(() => {
+    const practiceProjects = projects.filter((element) => element.fields.type === "practice")
+    setPractice(practiceProjects);
+  }, [projects]);
+
+  const practiceCardJSX = practice.map((project, index) => (
+    <PracticeCard
+      key={index}
+      link={project.fields.link}
+      title={project.fields.title}
+      tech={project.fields.tech}
+      highlight={project.fields.highlight}
+      github={project.fields.github}
       id={project.id}
     />
   ));
 
   return (
     <Layout>
-      <ProjectsBody>
-        <ProjectsHeader>
-          <ProjectsTitle>Projects</ProjectsTitle>
-          <ProjectsSubTitle>Checkout some of my favorite projects!</ProjectsSubTitle>           
-        </ProjectsHeader>
-        <ProjectsFeaturedPanel>
-          <SectionHeadingContainer>
-            <SectionHeadings>Featured</SectionHeadings>
-            <SectionSubHeadings>The following were designed and built by me</SectionSubHeadings>  
-          </SectionHeadingContainer>
-          <ProjectsFeaturedContainer>
-            {featuredCardJSX}     
-          </ProjectsFeaturedContainer>  
-        </ProjectsFeaturedPanel>
-        <ProjectsFeaturedPanel>
-          <SectionHeadingContainer>
-            <SectionHeadings>Practice Makes Perfect</SectionHeadings>
-            <SectionSubHeadings>The following utlized other designs and some included collaboration with other developers!</SectionSubHeadings>         
-          </SectionHeadingContainer>
-          
-        </ProjectsFeaturedPanel>
-      </ProjectsBody>  
+      <Main>
+        <Title>Projects</Title>
+        <SectionPanel>
+          <SectionHeading>Featured</SectionHeading>
+          <Cards>{featuredCardJSX}</Cards>         
+        </SectionPanel>
+        <SectionPanel>       
+          <SectionHeading>Practice Makes Perfect</SectionHeading>          
+          <Cards>{practiceCardJSX}</Cards>  
+        </SectionPanel>
+      </Main>  
     </Layout>
   )
 }

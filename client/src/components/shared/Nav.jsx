@@ -5,25 +5,33 @@ import styled from 'styled-components';
 const NavContainer = styled.nav`
   display: flex;
   width: 100vw;
-  height: 100px;
+  background-color: #9AB1A9;
 `
 
 const NavLinksContainer = styled.div`
   display: flex;
 `
 
+const HomeLink = styled.h1`
+  font-size: 36px;
+  margin: 20px;
+  color: #EEEEF2;
+`
+
 const NavLinks = styled.p`
-  font-size: 24px;
-  margin: 10px;
+  font-size: 28px;
+  margin: 25px;
+  color: #EEEEF2;
 `
 
 
 const Nav = () => { 
   return (
     <NavContainer>
-      <Link to="/"><div><h1>Brianna's Portfolio</h1></div></Link>
+      <Link to="/"><HomeLink>Home</HomeLink></Link>
       <NavLinksContainer>
-        <Link to="/projects"><NavLinks>Projects</NavLinks></Link>                
+        <Link to="/projects"><NavLinks>Projects</NavLinks></Link>   
+        <Link to="/skills"><NavLinks>Skills</NavLinks></Link>
         <Link to="/library"><NavLinks>Library</NavLinks></Link>                      
       </NavLinksContainer>
     </NavContainer>

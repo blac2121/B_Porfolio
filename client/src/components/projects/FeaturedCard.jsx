@@ -2,22 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
-  width: 450px;
-  height: 450px;
-  border: 1px solid gray;
+  width: 30vw;
   border-radius: 3px;
-  margin: 50px;
-  background-color: #D8D9DE;
-  box-shadow: 2px 2px 5px 2px #393B45;
-
+  background-color: #EEEEF2;
+  box-shadow: 2px 3px 6px 1px #516D63;
+  margin: 20px;
 
   :hover {
     transform: scale(1.03);
   }
 `
 
-
-const BikeCoverPhoto = styled.img`
+const CoverPhoto = styled.img`
   width: 100%;
   height: 200px;
 `
@@ -28,12 +24,12 @@ const ProjectDetailContainer = styled.div`
 
 const ProjectTitles = styled.h4`
   font-size: 24px;
-  color: #393B45;
+  color: #86837B;
 `
 
 const ProjectText = styled.p`
   font-size: 18px;
-  color: #393B45;
+  color: #86837B;
 `
 
 const Featured = (props) => {
@@ -41,10 +37,11 @@ const Featured = (props) => {
     <ProjectContainers>
       <a href={props.link} target="_blank">         
         <ProjectDetailContainer>
-          <div><BikeCoverPhoto src={props.image}/></div>
-          <div><ProjectTitles>{props.title}</ProjectTitles></div>                        
-          <div><ProjectText>{props.tech}</ProjectText></div>                          
-          <div><ProjectText>{props.highlight}</ProjectText></div> 
+          <CoverPhoto src={props.image}/>
+          <ProjectTitles>{props.title}</ProjectTitles>                        
+          <ProjectText>Tech Stack: {props.tech}</ProjectText>                          
+          <ProjectText>Highlights: {props.highlight}</ProjectText>
+          <ProjectText>Github: {props.github}</ProjectText>
         </ProjectDetailContainer>
       </a>
     </ProjectContainers>  
