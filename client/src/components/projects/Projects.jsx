@@ -6,6 +6,30 @@ import FeaturedCard from './FeaturedCard';
 import PracticeCard from './PracticeCard';
 
 
+// const Main = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   margin: 10px auto;
+//   width: 80vw;
+// `
+
+// const SectionPanel = styled.div`
+//   border-radius: 3px; 
+//   margin: 50px;
+//   border: 1px solid #9AB1A9;
+// `
+
+// const SectionHeading = styled.h4`
+//   font-size: 36px;
+//   color: #4A4C4B;
+//   margin: 50px;
+// `
+
+// const Cards = styled.div`
+//   display: flex;
+//   margin: 50px;
+// `
+
 const Main = styled.div`
   display: flex;
   flex-direction: column;
@@ -13,26 +37,24 @@ const Main = styled.div`
   width: 80vw;
 `
 
-const Title = styled.h3`
-  font-size: 42px;
-  margin-bottom: 20px;
-`
-
 const SectionPanel = styled.div`
+  display: flex;
+  flex-direction: column;
   border-radius: 3px; 
   margin: 50px;
-  background-color: #9AB1A9;
+  border: 1px solid #9AB1A9;
 `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
-  color: #EEEEF2;
+  color: #4A4C4B;
   margin: 50px;
 `
 
 const Cards = styled.div`
   display: flex;
-  margin: 50px;
+  flex-direction: column;
+  // margin: 50px;
 `
 
 const Projects = () => { 
@@ -92,13 +114,12 @@ const Projects = () => {
   return (
     <Layout>
       <Main>
-        <Title>Projects</Title>
         <SectionPanel>
-          <SectionHeading>Featured</SectionHeading>
+          <SectionHeading>Featured Projects</SectionHeading>
           <Cards>{featuredCardJSX}</Cards>         
         </SectionPanel>
         <SectionPanel>       
-          <SectionHeading>Practice Makes Perfect</SectionHeading>          
+          <SectionHeading>Practice Projects Makes Perfect</SectionHeading>          
           <Cards>{practiceCardJSX}</Cards>  
         </SectionPanel>
       </Main>  

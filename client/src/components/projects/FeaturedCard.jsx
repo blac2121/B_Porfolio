@@ -2,49 +2,64 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
-  width: 30vw;
+  display: flex;
   border-radius: 3px;
   background-color: #EEEEF2;
   box-shadow: 2px 3px 6px 1px #516D63;
-  margin: 20px;
+  margin: 40px 60px;
 
   :hover {
     transform: scale(1.03);
   }
 `
 
+const CoverPhotoContainer = styled.div`
+  display: flex;
+  flex-grow: 1;
+`
+
 const CoverPhoto = styled.img`
   width: 100%;
-  height: 200px;
 `
 
 const ProjectDetailContainer = styled.div`
+  flex-grow: 3;
   margin: 15px;
+`
+
+const ProjectLabels = styled.h4`
+  color: #0A1F55;
 `
 
 const ProjectTitles = styled.h4`
   font-size: 24px;
-  color: #86837B;
+  color: #4A4C4B;
 `
 
 const ProjectText = styled.p`
   font-size: 18px;
-  color: #86837B;
+  color: #4A4C4B;
+  
 `
 
 const Featured = (props) => {
-  return (
-    <ProjectContainers>
-      <a href={props.link} target="_blank">         
-        <ProjectDetailContainer>
-          <CoverPhoto src={props.image}/>
-          <ProjectTitles>{props.title}</ProjectTitles>                        
-          <ProjectText>Tech Stack: {props.tech}</ProjectText>                          
-          <ProjectText>Highlights: {props.highlight}</ProjectText>
-          <ProjectText>Github: {props.github}</ProjectText>
+  return (   
+    <a href={props.link} target="_blank">
+      <ProjectContainers>
+        {/* <CoverPhotoContainer>
+          <CoverPhoto src={props.image} />
+        </CoverPhotoContainer>          */}
+        <ProjectDetailContainer>         
+          <ProjectTitles>{props.title}</ProjectTitles> 
+          <ProjectLabels>Tech Stack</ProjectLabels>
+          <ProjectText> {props.tech}</ProjectText> 
+          <ProjectLabels>Highlights</ProjectLabels>
+          <ProjectText>{props.highlight}</ProjectText>
+          <ProjectLabels>Github</ProjectLabels>
+          <ProjectText>{props.github}</ProjectText>
         </ProjectDetailContainer>
-      </a>
-    </ProjectContainers>  
+      </ProjectContainers>   
+    </a> 
   )
 }
 
