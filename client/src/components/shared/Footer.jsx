@@ -51,14 +51,14 @@ const Footer = () => {
         <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
       </AttributionContainer>
       <IconContainer>
-        <IconDiv>
+        {/* <IconDiv>
           <Icons className="devicon-github-plain-wordmark" />
           <IconLink href="https://github.com/blac2121" target="_blank" />     
         </IconDiv>
         <IconDiv>
           <Icons className="devicon-linkedin-plain" />
           <IconLink href="https://www.linkedin.com/in/bel1212/" target="_blank" />
-        </IconDiv>        
+        </IconDiv>         */}
       </IconContainer>
     </FooterContainer> 
   )
