@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
-  width: 30vw;
+  width: 20vw;
   border-radius: 3px;
   margin: 20px;
   background-color: #EEEEF2;
@@ -12,7 +12,6 @@ const ProjectContainers = styled.div`
     transform: scale(1.03);
   }
 `
-
 
 const ProjectDetailContainer = styled.div`
   margin: 15px;
@@ -28,6 +27,25 @@ const ProjectText = styled.p`
   color: #4A4C4B;
 `
 
+const ProjectButtons = styled.button`
+  border: none;
+  background-color: #9AB1A9;
+  color: #EEEEF2;
+  padding: 12px;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+  :hover {
+    transform: scale(1.1);
+    background-color: #67867B;
+  }
+`
+
 const Practice = (props) => {
   return (
     <ProjectContainers>
@@ -35,7 +53,7 @@ const Practice = (props) => {
         <ProjectTitles>{props.title}</ProjectTitles>                        
         <ProjectText>{props.tech}</ProjectText>                          
         <ProjectText>{props.highlight}</ProjectText>
-        <ProjectText>{props.github}</ProjectText>
+        <a href={props.github} target="_blank"><ProjectButtons>Github</ProjectButtons></a>
       </ProjectDetailContainer>
     </ProjectContainers>  
   )
