@@ -6,32 +6,33 @@ import FeaturedCard from './FeaturedCard';
 import PracticeCard from './PracticeCard';
 
 
-const Main = styled.div`
+const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 10px auto;
-  width: 80vw;
+  margin: 20px auto;
+  text-align: center;
+`
+
+const Header = styled.h3`
+  font-size: 36px;
+`
+
+const SubHeader = styled.h4`
+  font-size: 24px;
+  margin: 0;
 `
 
 const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
-  border-radius: 3px; 
   margin: 50px;
-  border: 1px solid #9AB1A9;
 `
 
 const PracticePanel = styled.div`
   display: flex;
-  border-radius: 3px; 
-  border: 1px solid #9AB1A9;
+  flex-direction: column;
 `
 
-const PracticePanelMain = styled.div`
-  display: flex;
-  border-radius: 3px; 
-  border: 1px solid #9AB1A9;
-`
 
 const SectionHeading = styled.h4`
   font-size: 36px;
@@ -47,6 +48,7 @@ const Cards = styled.div`
 const PracticeCards = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 `
 
 const Projects = () => { 
@@ -78,6 +80,7 @@ const Projects = () => {
       key={index}
       link={project.fields.link}
       title={project.fields.title}
+      goal={project.fields.goal}
       image={project.fields.image}
       tech={project.fields.tech}
       highlight={project.fields.highlight}
@@ -105,18 +108,18 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Main>
-        <FeaturedPanel>
-          <SectionHeading>Featured Projects</SectionHeading>
-          <Cards>{featuredCardJSX}</Cards>         
-        </FeaturedPanel>
-        <PracticePanel>       
-          <SectionHeading>Practice Projects Makes Perfect</SectionHeading>
-          <PracticePanelMain>
-            <PracticeCards>{practiceCardJSX}</PracticeCards>
-          </PracticePanelMain>                  
-        </PracticePanel>
-      </Main>  
+      <HeaderContainer>
+        <Header>Projects</Header>
+        <SubHeader>Conscise Code - Conscise User Experiences</SubHeader>          
+      </HeaderContainer>
+      <FeaturedPanel>
+        <SectionHeading>Featured Projects</SectionHeading>
+        <Cards>{featuredCardJSX}</Cards>         
+      </FeaturedPanel>
+      <PracticePanel>       
+        <SectionHeading>Practice Makes Perfect</SectionHeading>
+        <PracticeCards>{practiceCardJSX}</PracticeCards>                
+      </PracticePanel> 
     </Layout>
   )
 }

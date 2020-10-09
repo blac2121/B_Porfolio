@@ -4,8 +4,6 @@ import coverphoto from '../assets/jessy-smith-zFOm6KzA-7g-unsplash.jpg';
 import profilephoto from '../assets/Brianna.jpg';
 import styled from 'styled-components';
 import Carousel from 'react-elastic-carousel';
-import IconReact from 'react-devicon/react/original-wordmark' 
-
 
 
 const Panels = styled.div`
@@ -33,7 +31,8 @@ const AboutImgContainers = styled.div`
 const Title = styled.h3`
   font-size: 42px;
   text-align: center;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 25px;
   margin: 0;
 `
 
@@ -93,9 +92,10 @@ const ResumeButton = styled.button`
   }
 `
 
-const SkillsIcons = styled.i`
-  font-size: 36px;
+const Icons = styled.i`
+  font-size: 6rem;
 `
+
 
 const Home = () => { 
   return (
@@ -106,12 +106,17 @@ const Home = () => {
       <Panels>
         <Title>Skills</Title>
         <CarouselContainer>
-          <Carousel itemsToShow={4}>
-            <i className="devicon-react-original-wordmark"></i>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
+          <Carousel itemsToShow={4} itemsToScroll={4} itemPadding={[50]}>
+            <Icons className="devicon-react-original-wordmark"></Icons>
+            <Icons className="devicon-html5-plain-wordmark"></Icons>
+            <Icons className="devicon-css3-plain-wordmark"></Icons>
+            <Icons className="devicon-javascript-plain"></Icons>
+            <Icons className="devicon-ruby-plain-wordmark"></Icons>
+            <Icons className="devicon-rails-plain-wordmark"></Icons>
+            <Icons className="devicon-postgresql-plain-wordmark"></Icons>
+            <Icons className="devicon-express-original-wordmark colored"></Icons>
+            <Icons className="devicon-mongodb-plain-wordmark"></Icons>
+            <Icons className="devicon-nodejs-plain"></Icons>
           </Carousel>          
         </CarouselContainer>
       </Panels>
