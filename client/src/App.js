@@ -5,7 +5,6 @@ import Home from '../src/components/Home';
 import Library from '../src/components/Library';
 import Projects from '../src/components/projects/Projects';
 import Skills from '../src/components/Skills';
-import styled from 'styled-components';
 
 
 function App() {
@@ -15,8 +14,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/skills" component={Skills} />
-        <Route exact path="/library" component={Library} />
-        
+        <Route exact path="/library" component={Library} />       
       </Switch>     
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import coverphoto from '../assets/jessy-smith-zFOm6KzA-7g-unsplash.jpg';
 import profilephoto from '../assets/Brianna.jpg';
@@ -34,6 +35,7 @@ const Title = styled.h3`
   padding-top: 30px;
   padding-bottom: 25px;
   margin: 0;
+  text-decoration: none;
 `
 
 const SubTitle = styled.h4`
@@ -104,7 +106,7 @@ const Home = () => {
         <CoverImage src={coverphoto} alt="Cover Photo" />
       </div>
       <Panels>
-        <Title>Skills</Title>
+        <Title>Skills</Title>       
         <CarouselContainer>
           <Carousel itemsToShow={4} itemsToScroll={4} itemPadding={[50]}>
             <Icons className="devicon-react-original-wordmark"></Icons>
