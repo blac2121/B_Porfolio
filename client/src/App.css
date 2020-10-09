@@ -4,11 +4,7 @@ body {
 }
 
 
-a:link,
-a:visited,
-a:hover,
-a:active,
-a:focus {
+a {
   text-decoration: none;
 }
 
