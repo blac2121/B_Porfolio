@@ -11,13 +11,14 @@ const ProjectContainers = styled.div`
 
 const ProjectDetailContainer = styled.div`
   flex-grow: 3;
-  margin: 25px;
+  margin: 35px;
 `
 
 
 const ProjectTitles = styled.h4`
   font-size: 28px;
   color: #516D63;
+  margin-top: 5px;
 `
 
 const ProjectText = styled.p`
