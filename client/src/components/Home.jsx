@@ -159,6 +159,25 @@ const Home = () => {
           </AboutImgContainers>
         </AboutContainer>
       </AboutPanel>
+      <Panels>
+        <Title>Library</Title>       
+        <CarouselContainer>
+          <Carousel itemsToShow={4} itemsToScroll={1} itemPadding={[50]} pagination={false}>
+            <img src="https://i.imgur.com/qSrMGM4.png" alt="The Pragmatic Programmer" />
+            <img src="https://i.imgur.com/s6tgKdY.png" alt="The Lean Startup" />
+            <img src="https://i.imgur.com/fFhqO1e.png" alt="The Lean Product Playbook" />
+            <img src="https://i.imgur.com/1zJl6Yf.png" alt="Inspired: How to Create Tech Products Customers Love" />
+            <img src="https://i.imgur.com/tHWXXOm.png" alt="Creativity, Inc" />
+            <img src="https://i.imgur.com/npvYDus.png" alt="Built to Last" />
+            <img src="https://i.imgur.com/4jMJWsY.png" alt="Crossing the Chasm" />
+          </Carousel>                    
+        </CarouselContainer>
+        <ButtonContainer>
+          <Link to='/library'>
+            <SeeMore>See More</SeeMore>
+          </Link>        
+        </ButtonContainer>
+      </Panels>
     </Layout>
   )
 }

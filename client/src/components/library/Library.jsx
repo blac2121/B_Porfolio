@@ -23,7 +23,7 @@ const Banner = styled.div`
   justify-content: center;
   width: 100%;
   height: 350px;
-  background: rgba(239, 239, 242, 0.3);
+  background: rgba(239, 239, 242, 0.4);
 `;
 
 const MainContainer = styled.div`
@@ -63,7 +63,6 @@ const SectionHeading = styled.h4`
 
 const IconPanel = styled.div`
   display: flex;
-  // flex-wrap: wrap;
   margin-left: 20px;
 `
 
@@ -121,7 +120,7 @@ const Library = () => {
       <CoverImage>
         <Banner>
           <Header>Library</Header>
-          <SubHeader>Here are some of the titles I found most influential!</SubHeader>
+          <SubHeader>Some of the titles I found most influential</SubHeader>
         </Banner>       
       </CoverImage>
       <MainContainer>

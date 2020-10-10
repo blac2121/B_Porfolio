@@ -17,12 +17,20 @@ const HomeLink = styled.h1`
   font-size: 36px;
   margin: 30px;
   color: #EEEEF2;
+
+  :hover {
+    transform: scale(1.1);
+  }
 `
 
 const NavLinks = styled.p`
   font-size: 28px;
   margin: 25px;
   color: #EEEEF2;
+
+  :hover {
+    transform: scale(1.1);
+  }
 `
 
 
