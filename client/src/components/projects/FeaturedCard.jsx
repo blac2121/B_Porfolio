@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const ProjectContainers = styled.div`
   display: flex;
   border-radius: 3px;
-  background-color: #EEEEF2;
   box-shadow: 3px 4px 7px 2px #516D63;
   margin: 40px 60px;
 `
@@ -28,33 +27,31 @@ const ProjectText = styled.p`
 `
 
 const ProjectCoverPhotos = styled.img`
-  width: 225px;
+  width: 325px;
   height: 225px;
   padding: 20px;
   margin: 10px;
+`
+const ImgButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `
 
 const ButtonContainers = styled.div`
   display: flex;
   margin: 10px;
+  justify-content: center;
 `
 
-const ProjectButtons = styled.button`
-  border: none;
-  background-color: #9AB1A9;
-  color: #EEEEF2;
-  padding: 12px;
-  width: 125px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 24px;
-  margin: 10px;
-  transition-duration: 0.4s;
+const SeeMore = styled.p`
+  color: #67867B;
   cursor: pointer;
+  font-size: 24px;
+  margin: 20px;
 
   :hover {
     transform: scale(1.1);
-    background-color: #67867B;
   }
 `
 
@@ -68,13 +65,17 @@ const Featured = (props) => {
         <ProjectText>{props.highlight}</ProjectText>
         <ProjectText>{props.tech}</ProjectText>        
       </ProjectDetailContainer>
-      <div>
-        <div><ProjectCoverPhotos src={props.image} /></div>
+      <ImgButtonContainer>
+        <ProjectCoverPhotos src={props.image} />
         <ButtonContainers>
-          <a href={props.link} target="_blank" rel="noopener noreferrer"><ProjectButtons>Site</ProjectButtons></a>
-          <a href={props.github} target="_blank" rel="noopener noreferrer"><ProjectButtons>Github</ProjectButtons></a>
+          <a href={props.link} target="_blank" rel="noopener noreferrer">
+            <SeeMore>Live Site</SeeMore>
+          </a>
+          <a href={props.github} target="_blank" rel="noopener noreferrer">
+            <SeeMore>Github</SeeMore>
+          </a>
         </ButtonContainers>
-      </div>
+      </ImgButtonContainer>
     </ProjectContainers>   
   )
 }

@@ -71,7 +71,7 @@ const Skills = () => {
     <Layout>
       <HeaderContainer>
         <Header>Skills</Header>
-        <SubHeader>Check out some of the languages, frameworks, and tools I've used!</SubHeader>
+        <SubHeader>Here are the languages, frameworks, and tools I've used</SubHeader>
       </HeaderContainer>
       <MainContainer>
         <SectionPanel>
