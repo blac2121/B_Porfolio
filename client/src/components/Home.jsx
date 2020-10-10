@@ -13,15 +13,14 @@ const Panels = styled.div`
 `
 
 const AboutPanel = styled.div`
-  margin: 50px 0;
   background-color: #DFE1E1;
-  border: 2px solid #9AB1A9;
+  border: 1px solid #DFDFDF;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px 1px #9AB1A9;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 `
 
 const AboutSubContainers = styled.div`
-  margin: 50px;
+  margin: 10px 50px 50px;
   background-color: #DFE1E1;
 `
 
@@ -34,16 +33,11 @@ const AboutImgContainers = styled.div`
 const Title = styled.h3`
   font-size: 42px;
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 25px;
-  margin: 0;
-  text-decoration: none;
 `
 
 const SubTitle = styled.h4`
   font-size: 36px;
-  margin-top: 0px;
-  margin-bottom: 5px;
+  margin: 0;
 `
 
 const AboutText = styled.p`

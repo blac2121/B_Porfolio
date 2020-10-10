@@ -3,39 +3,69 @@ import Layout from './shared/Layout';
 import styled from 'styled-components';
 
 
-const HeaderContainer = styled.div`
+const CoverImage = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  justify-content: center;
+  background: url(https://i.imgur.com/Z0eW4xI.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin: 0 auto;
   text-align: center;
+`
+
+const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background: rgba(239, 239, 242, 0.7);
 `
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px auto;
+  margin: 10px auto;
+  margin-bottom: 50px;
+  // background-color: #F9F9FA;
+  // box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  // border: 1px solid #DFDFDF;
+  // background-color: #F9F9FA;
 `
 
 const Header = styled.h3`
   font-size: 48px;
+  margin: 10px;
+  padding: 0;
+  font-weight: 900;
+  color: #1D1D1D;
 `
 
 const SubHeader = styled.h4`
   font-size: 24px;
   font-weight: 400;
-  margin: 0;
+  margin: 10px;
+  padding: 0;
+  color: #1D1D1D;
 `
 
 const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  width: 100%;
+  margin: 40px 0;
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 50px;
+  margin: 50px 0 20px 50px;
   font-weight: 300;
 `
 
@@ -43,7 +73,9 @@ const IconPanel = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
+  margin-bottom: 55px;
   align-items: baseline;
+  justify-content: center;
 `
 
 const Icons = styled.i`
@@ -69,10 +101,12 @@ const Skills = () => {
 
   return (
     <Layout>
-      <HeaderContainer>
-        <Header>Skills</Header>
-        <SubHeader>Here are the languages, frameworks, and tools I've used</SubHeader>
-      </HeaderContainer>
+      <CoverImage>
+        <Banner>
+          <Header>Skills</Header>
+          <SubHeader>Here are the languages, frameworks, and tools I've used</SubHeader>
+        </Banner>
+      </CoverImage>
       <MainContainer>
         <SectionPanel>
           <SectionHeading>Languages</SectionHeading>

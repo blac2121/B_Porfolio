@@ -51,6 +51,8 @@ const Footer = () => {
     <FooterContainer>
       <AttributionContainer> 
         <AttributionText>Home Coverphoto by <a href="https://unsplash.com/@jessysmith?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jessy Smith</a> on <a href="https://unsplash.com/s/photos/white-office?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
+        <AttributionText>Photo by <a href="https://unsplash.com/@visualdesign_inspiration?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Visual Design</a> on <a href="https://unsplash.com/s/photos/wireframe?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
+        <AttributionText>Skills Coverphoto by <a href="https://unsplash.com/@cdr6934?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chris Ried</a> on <a href="https://unsplash.com/s/photos/code?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
         <AttributionText>Library Coverphoto by <a href="https://unsplash.com/@pirye?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Amelie &amp; Niklas Ohlrogge</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
       </AttributionContainer> 
       <TaglineContainer>        

@@ -5,12 +5,10 @@ const ProjectContainers = styled.div`
   width: 20vw;
   border-radius: 3px;
   margin: 20px;
-  background-color: #EEEEF2;
-  box-shadow: 2px 3px 6px 1px #516D63;
-
-  :hover {
-    transform: scale(1.03);
-  }
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
 const ProjectDetailContainer = styled.div`
