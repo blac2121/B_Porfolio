@@ -3,9 +3,11 @@ import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
   display: flex;
-  border-radius: 3px;
-  box-shadow: 3px 4px 7px 2px #516D63;
+  border-radius: 5px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   margin: 40px 60px;
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
 const ProjectDetailContainer = styled.div`

@@ -24,7 +24,7 @@ const Banner = styled.div`
   width: 100%;
   height: 350px;
   background: rgba(239, 239, 242, 0.4);
-`;
+`
 
 const MainContainer = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ const Header = styled.h3`
 
 const SubHeader = styled.h4`
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 400;
   margin: 10px;
   padding: 0;
   color: #1D1D1D;

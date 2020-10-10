@@ -3,33 +3,54 @@ import Layout from './shared/Layout';
 import styled from 'styled-components';
 
 
-const HeaderContainer = styled.div`
+const CoverImage = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  justify-content: center;
+  background: url(https://i.imgur.com/Z0eW4xI.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin: 0 auto;
   text-align: center;
+`
+
+const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background: rgba(239, 239, 242, 0.7);
 `
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px auto;
+  margin: 10px auto;
+  margin-bottom: 50px;
 `
 
 const Header = styled.h3`
   font-size: 48px;
+  margin: 10px;
+  padding: 0;
+  font-weight: 900;
+  color: #1D1D1D;
 `
 
 const SubHeader = styled.h4`
   font-size: 24px;
   font-weight: 400;
-  margin: 0;
+  margin: 10px;
+  padding: 0;
+  color: #1D1D1D;
 `
 
 const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  margin: 20px;
 `
 
 const SectionHeading = styled.h4`
@@ -69,10 +90,12 @@ const Skills = () => {
 
   return (
     <Layout>
-      <HeaderContainer>
-        <Header>Skills</Header>
-        <SubHeader>Here are the languages, frameworks, and tools I've used</SubHeader>
-      </HeaderContainer>
+      <CoverImage>
+        <Banner>
+          <Header>Skills</Header>
+          <SubHeader>Here are the languages, frameworks, and tools I've used</SubHeader>
+        </Banner>
+      </CoverImage>
       <MainContainer>
         <SectionPanel>
           <SectionHeading>Languages</SectionHeading>
