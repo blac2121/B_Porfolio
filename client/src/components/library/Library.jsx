@@ -2,30 +2,50 @@ import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import Layout from '../shared/Layout';
 import styled from 'styled-components';
-import BookCard from '../library/BookCard'
+import BookCard from '../library/BookCard';
 
-const HeaderContainer = styled.div`
+
+const CoverImage = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  justify-content: center;
+  background: url(https://i.imgur.com/vuNWd3V.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  margin: 0 auto;
   text-align: center;
 `
+
+const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 350px;
+  background: rgba(239, 239, 242, 0.3);
+`;
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px auto;
-  // background-color: #DADAE3;
 `
 
 const Header = styled.h3`
   font-size: 48px;
+  margin: 10px;
+  padding: 0;
+  font-weight: 900;
+  color: #1D1D1D;
 `
 
 const SubHeader = styled.h4`
   font-size: 24px;
-  font-weight: 400;
-  margin: 0;
+  font-weight: 900;
+  margin: 10px;
+  padding: 0;
+  color: #1D1D1D;
 `
 
 const SectionPanel = styled.div`
@@ -43,7 +63,7 @@ const SectionHeading = styled.h4`
 
 const IconPanel = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   margin-left: 20px;
 `
 
@@ -98,10 +118,12 @@ const Library = () => {
 
   return (
     <Layout>
-      <HeaderContainer>
-        <Header>Library</Header>
-        <SubHeader>Here are some of the titles I found most influential!</SubHeader>
-      </HeaderContainer>
+      <CoverImage>
+        <Banner>
+          <Header>Library</Header>
+          <SubHeader>Here are some of the titles I found most influential!</SubHeader>
+        </Banner>       
+      </CoverImage>
       <MainContainer>
         <SectionPanel>
           <SectionHeading>Industry</SectionHeading>

@@ -1,54 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ProjectContainers = styled.div`
-  width: 20vw;
-  border-radius: 3px;
-  margin: 20px;
-
-  :hover {
-    transform: scale(1.03);
-  }
-`
 
 const ProjectDetailContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 25px;
+  width: 20vw;
+  margin: 20px;
   align-items: center;
 `
 
-
 const HeaderContainer = styled.div`
-  flex-grow: 1;
+  margin: 0;
 `
 
 const DetailContainer = styled.div`
-  flex-grow: 2;
-`
+  display: flex;
+  flex-direction: column;
+` 
 
 const ProjectTitles = styled.h4`
   font-size: 18px;
+  text-align: center;
 `
 
 const ProjectText = styled.p`
   font-size: 18px;
+  text-align: center;
+  margin: 0;
 `
 
 
 const BookCard = (props) => {
   return (
-    <ProjectContainers>
-      <ProjectDetailContainer>
-        <HeaderContainer>
-          <img src={props.img} alt={props.name}/>
-        </HeaderContainer>
-        <DetailContainer> 
-          <ProjectTitles>{props.name}</ProjectTitles>
-          <ProjectText>{props.author}</ProjectText>                          
-        </DetailContainer>
-      </ProjectDetailContainer>
-    </ProjectContainers>  
+    <ProjectDetailContainer>
+      <HeaderContainer>
+        <img src={props.img} alt={props.name}/>
+      </HeaderContainer>
+      <DetailContainer> 
+        <ProjectTitles>{props.name}</ProjectTitles>
+        <ProjectText>{props.author}</ProjectText>                          
+      </DetailContainer>
+    </ProjectDetailContainer> 
   )
 }
 

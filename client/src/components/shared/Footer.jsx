@@ -47,8 +47,8 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <AttributionContainer>
-        <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
+      <AttributionContainer>        
+      <span>Photo by <a href="https://unsplash.com/@pirye?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Amelie &amp; Niklas Ohlrogge</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>        <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
       </AttributionContainer>
       <IconContainer>
         <IconDiv>
