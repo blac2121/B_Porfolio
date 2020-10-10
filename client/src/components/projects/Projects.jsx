@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
 `
 
 const Header = styled.h3`
-  font-size: 36px;
+  font-size: 48px;
 `
 
 const SubHeader = styled.h4`
