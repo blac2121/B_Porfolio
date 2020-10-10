@@ -1,13 +1,12 @@
 body {
   background-color: #F0F0F0;
-  /* background-color: #EFEFF2; */
   color: #4A4C4B;
 }
 
 
-a {
+a, a:hover, a:focus, a:active {
   text-decoration: none;
-  border: none;
+  color: inherit;
 }
 
 button.rec-dot {
