@@ -53,7 +53,9 @@ const Practice = (props) => {
         <ProjectTitles>{props.title}</ProjectTitles>                        
         <ProjectText>{props.tech}</ProjectText>                          
         <ProjectText>{props.highlight}</ProjectText>
-        <a href={props.github} target="_blank"><ProjectButtons>Github</ProjectButtons></a>
+        <a href={props.github} target="_blank"rel="noopener noreferrer">
+          <ProjectButtons>Github</ProjectButtons>
+        </a>
       </ProjectDetailContainer>
     </ProjectContainers>  
   )

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import coverphoto from '../assets/jessy-smith-zFOm6KzA-7g-unsplash.jpg';
 import profilephoto from '../assets/Brianna.jpg';
@@ -134,7 +133,7 @@ const Home = () => {
             </ButtonContainer>
           </AboutSubContainers>
           <AboutImgContainers>
-            <img src={profilephoto}/>
+            <img src={profilephoto} alt="Brianna Profile"/>
           </AboutImgContainers>
         </AboutContainer>
       </AboutPanel>
