@@ -13,7 +13,7 @@ const HeaderContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px auto;
+  margin: 30px auto;
 `
 
 const Header = styled.h3`
@@ -30,11 +30,11 @@ const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px;
-  background-color: #DFE1E1;
-  border: 2px solid #9AB1A9;
-  padding-bottom: 70px;
-  box-shadow: 1px 1px 1px 1px #9AB1A9;
-  border-radius: 5px;
+  // background-color: #DFE1E1;
+  // border: 2px solid #9AB1A9;
+  // padding-bottom: 70px;
+  // box-shadow: 1px 1px 1px 1px #9AB1A9;
+  // border-radius: 5px;
 `
 
 const SectionHeading = styled.h4`
@@ -48,13 +48,26 @@ const IconPanel = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
+  align-items: baseline;
 `
 
 const Icons = styled.i`
   font-size: 6rem;
   margin: 25px 50px;
-  // margin-left: 50px;
-  // margin-right: 50px;
+`
+
+const IconTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+`
+
+const IconText = styled.p`
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
 `
 
 const Skills = () => { 
@@ -73,6 +86,10 @@ const Skills = () => {
             <Icons className="devicon-css3-plain-wordmark colored" />
             <Icons className="devicon-javascript-plain colored" />
             <Icons className="devicon-ruby-plain-wordmark colored" />
+            <IconTextContainer>
+              <Icons className="devicon-python-plain-wordmark" />
+              <IconText>(In Progress)</IconText>
+            </IconTextContainer>         
           </IconPanel>
         </SectionPanel>
         <SectionPanel>     
