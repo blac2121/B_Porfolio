@@ -1,11 +1,13 @@
 body {
-  background-color: #EEEEF2;
+  background-color: #F0F0F0;
+  /* background-color: #EFEFF2; */
   color: #4A4C4B;
 }
 
 
 a {
   text-decoration: none;
+  border: none;
 }
 
 button.rec-dot {

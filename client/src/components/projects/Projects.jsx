@@ -15,10 +15,11 @@ const HeaderContainer = styled.div`
 
 const Header = styled.h3`
   font-size: 48px;
+  margin: 20px;
 `
 
 const SubHeader = styled.h4`
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
 `
 
@@ -49,6 +50,11 @@ const PracticeCards = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #DFE1E1;
+  border: 2px solid #9AB1A9;
+  padding-bottom: 70px;
+  box-shadow: 2px 2px 2px 2px #DADAE3;
+  border-radius: 5px;
 `
 
 const Projects = () => { 
@@ -110,7 +116,7 @@ const Projects = () => {
     <Layout>
       <HeaderContainer>
         <Header>Projects</Header>
-        <SubHeader>Conscise Code - Conscise User Experiences</SubHeader>          
+        <SubHeader>Concise Code - Detailed Design - Excellent Experiences</SubHeader>          
       </HeaderContainer>
       <FeaturedPanel>
         <SectionHeading>Featured Projects</SectionHeading>

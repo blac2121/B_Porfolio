@@ -33,15 +33,15 @@ const IconDiv = styled.div`
   }
 `
 
-
-const IconLink = styled.a`
-
-`
-
 const Icons = styled.i`
   font-size: 4rem;
   margin: 15px;
+  text-decoration: none;
+  background: white;
+  fill: yellow;
 `
+
+
 
 const Footer = () => { 
 
@@ -51,14 +51,16 @@ const Footer = () => {
         <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
       </AttributionContainer>
       <IconContainer>
-        {/* <IconDiv>
-          <Icons className="devicon-github-plain-wordmark" />
-          <IconLink href="https://github.com/blac2121" target="_blank" />     
-        </IconDiv>
         <IconDiv>
-          <Icons className="devicon-linkedin-plain" />
-          <IconLink href="https://www.linkedin.com/in/bel1212/" target="_blank" />
-        </IconDiv>         */}
+          <a href="https://github.com/blac2121" target="_blank" >
+            <Icons className="devicon-github-plain-wordmark" />
+          </a>     
+        </IconDiv>
+        <IconDiv>     
+          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" >
+            <Icons className="devicon-linkedin-plain" />
+          </a> 
+        </IconDiv>        
       </IconContainer>
     </FooterContainer> 
   )

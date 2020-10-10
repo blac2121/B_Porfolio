@@ -14,7 +14,8 @@ const HeaderContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px auto;
+  margin: 30px auto;
+  // background-color: #DADAE3;
 `
 
 const Header = styled.h3`
@@ -31,11 +32,6 @@ const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px;
-  background-color: #DFE1E1;
-  border: 2px solid #9AB1A9;
-  padding-bottom: 70px;
-  box-shadow: 1px 1px 1px 1px #9AB1A9;
-  border-radius: 5px;
 `
 
 const SectionHeading = styled.h4`
@@ -47,13 +43,8 @@ const SectionHeading = styled.h4`
 
 const IconPanel = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-left: 20px;
-`
-
-const Icons = styled.i`
-  font-size: 6rem;
-  margin-left: 50px;
-  margin-right: 50px;
 `
 
 const Library = () => {
@@ -89,6 +80,7 @@ const Library = () => {
       key={index}
       name={book.fields.name}
       author={book.fields.author}
+      img={book.fields.image}
       id={book.id}
     />
   ));
@@ -98,6 +90,7 @@ const Library = () => {
       key={index}
       name={book.fields.name}
       author={book.fields.author}
+      img={book.fields.image}
       id={book.id}
     />
   ));

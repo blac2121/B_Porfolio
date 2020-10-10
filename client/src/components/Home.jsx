@@ -111,20 +111,19 @@ const Home = () => {
         <CarouselContainer>
           <Carousel itemsToShow={4} itemsToScroll={1} itemPadding={[50]} pagination={false}>
             <Icons className="devicon-react-original-wordmark"></Icons>
-            <Icons className="devicon-html5-plain-wordmark"></Icons>
-            <Icons className="devicon-css3-plain-wordmark"></Icons>
-            <Icons className="devicon-javascript-plain"></Icons>
             <Icons className="devicon-ruby-plain-wordmark"></Icons>
             <Icons className="devicon-rails-plain-wordmark"></Icons>
+            <Icons className="devicon-javascript-plain"></Icons>
+            <Icons className="devicon-html5-plain-wordmark"></Icons>
+            <Icons className="devicon-css3-plain-wordmark"></Icons>
             <Icons className="devicon-postgresql-plain-wordmark"></Icons>
             <Icons className="devicon-express-original-wordmark colored"></Icons>
             <Icons className="devicon-mongodb-plain-wordmark"></Icons>
             <Icons className="devicon-nodejs-plain"></Icons>
-            <Icons className="devicon-python-plain-wordmark" />
           </Carousel>                    
         </CarouselContainer>
         <ButtonContainer>
-          <ResumeButton>See More</ResumeButton>
+          <h5>See More</h5>
         </ButtonContainer>
       </Panels>
       <AboutPanel>
@@ -132,7 +131,7 @@ const Home = () => {
         <AboutContainer>
           <AboutSubContainers>
             <SubTitle>Hi, I'm Brianna!</SubTitle>
-            <AboutText>Thanks for checking in!  My journey into tech user experience started 6 years ago when I became a Quality Assurance Analyst. It was my first experience with agile teams and ensured users have nothing but best experiences and I've been in love with user experiences ever since! <br></br> <br></br> After two years I moved into a Business Analyst role where I was able to more closely focus on crafting which products to build and what features to include. I did Business Analyst and Product Management work for over 3 years and spent countless hours interviewing clients, user journey mapping, white-board designing, and was able to be the user advocate for pitching the best products users wanted and needed.<br></br> <br></br> After reading “Lean Startup” by Eric Reis again in the summer of 2020, I wanted to give coding a try. I love solving user problems and thought being able to code would be an even deeper user experience. I scoured the internet for a software bootcamp I thought would be the right fit for me and found the Software Engineer Immersive course General Assembly to be the perfect fit. I spent over 500 hours over 12 weeks learning, practicing, and tackling code. <br></br> <br></br> I’m excited to embark on the next iteration of my tech journey as a Software Engineer creating beautiful user products with the perfect market fit!  
+            <AboutText>Welcome!  My journey into tech user experience started 6 years ago when I became a Quality Assurance Analyst. It was my first experience with agile teams and ensured users have nothing but best experiences and I've been in love with user experiences ever since! <br></br> <br></br> After two years I moved into a Business Analyst role where I was able to more closely focus on crafting which products to build and what features to include. I did Business Analyst and Product Management work for over 3 years and spent countless hours interviewing clients, user journey mapping, white-board designing, and was able to be the user advocate for pitching the best products users wanted and needed.<br></br> <br></br> After reading “Lean Startup” by Eric Ries again in the summer of 2020, I wanted to give coding a try. I love solving user problems and thought being able to code would be an even deeper user experience. I scoured the internet for a software bootcamp I thought would be the right fit for me and found the Software Engineer Immersive course General Assembly to be the perfect fit. I spent over 500 hours over 12 weeks learning, practicing, and tackling code. <br></br> <br></br> I’m excited to embark on the next iteration of my tech journey as a Software Engineer creating beautiful user products with the perfect market fit!  
             </AboutText>
             <ButtonContainer>
               <ResumeButton>Resume</ResumeButton>

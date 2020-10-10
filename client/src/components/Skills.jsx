@@ -13,7 +13,7 @@ const HeaderContainer = styled.div`
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 60px auto;
+  margin: 30px auto;
 `
 
 const Header = styled.h3`
@@ -30,11 +30,6 @@ const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px;
-  background-color: #DFE1E1;
-  border: 2px solid #9AB1A9;
-  padding-bottom: 70px;
-  box-shadow: 1px 1px 1px 1px #9AB1A9;
-  border-radius: 5px;
 `
 
 const SectionHeading = styled.h4`
@@ -46,13 +41,28 @@ const SectionHeading = styled.h4`
 
 const IconPanel = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin-left: 20px;
+  align-items: baseline;
 `
 
 const Icons = styled.i`
   font-size: 6rem;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 25px 50px;
+`
+
+const IconTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+`
+
+const IconText = styled.p`
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
 `
 
 const Skills = () => { 
@@ -71,18 +81,32 @@ const Skills = () => {
             <Icons className="devicon-css3-plain-wordmark colored" />
             <Icons className="devicon-javascript-plain colored" />
             <Icons className="devicon-ruby-plain-wordmark colored" />
-            <Icons className="devicon-python-plain-wordmark" />
+            <IconTextContainer>
+              <Icons className="devicon-python-plain-wordmark" />
+              <IconText>(In Progress)</IconText>
+            </IconTextContainer>         
           </IconPanel>
         </SectionPanel>
         <SectionPanel>     
-          <SectionHeading>Frameworks / Libraries / Tools</SectionHeading>
+          <SectionHeading>Frameworks / Libraries</SectionHeading>
           <IconPanel>
-            <Icons className="devicon-react-original-wordmark colored"></Icons>
-            <Icons className="devicon-rails-plain-wordmark colored"></Icons>     
-            <Icons className="devicon-express-original-wordmark colored"></Icons>
-            <Icons className="devicon-nodejs-plain colored"></Icons>
+            <Icons className="devicon-react-original-wordmark colored" />
+            <Icons className="devicon-rails-plain-wordmark colored" />     
+            <Icons className="devicon-express-original-wordmark colored" />
+            <Icons className="devicon-nodejs-plain colored" />
+            <Icons className="devicon-bootstrap-plain-wordmark colored" />
+          </IconPanel> 
+        </SectionPanel>
+        <SectionPanel>     
+          <SectionHeading>Tools</SectionHeading>
+          <IconPanel>
             <Icons className="devicon-postgresql-plain-wordmark colored" />
             <Icons className="devicon-mongodb-plain-wordmark colored" /> 
+            <Icons className="devicon-git-plain-wordmark colored" /> 
+            <Icons className="devicon-heroku-line-wordmark colored" />
+            <Icons className="devicon-yarn-plain-wordmark colored" />
+            <Icons className="devicon-npm-original-wordmark colored" />
+            <Icons className="devicon-github-plain-wordmark colored" />
           </IconPanel> 
         </SectionPanel>
       </MainContainer>
