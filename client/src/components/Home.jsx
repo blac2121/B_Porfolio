@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
-
-import coverphoto from '../assets/jessy-smith-zFOm6KzA-7g-unsplash.jpg';
+import coverphoto from '../assets/Screen Shot 2020-10-10 at 3.39.18 PM.png';
 import profilephoto from '../assets/Brianna.jpg';
 import resumedoc from '../assets/LaCasse-Resume.pdf';
-
 
 
 const Panels = styled.div`
@@ -74,6 +73,17 @@ const AboutContainer = styled.div`
   display: flex;
 `
 
+const SeeMore = styled.p`
+  color: #9AB1A9;
+  cursor: pointer;
+  font-size: 24px;
+
+  :hover {
+    transform: scale(1.1);
+    color: #67867B;
+  }
+`
+
 const ButtonContainer = styled.div`
   text-align: center;
 `
@@ -126,7 +136,9 @@ const Home = () => {
           </Carousel>                    
         </CarouselContainer>
         <ButtonContainer>
-          <h5>See More</h5>
+          <Link to='/skills'>
+            <SeeMore>See More</SeeMore>
+          </Link>        
         </ButtonContainer>
       </Panels>
       <AboutPanel>

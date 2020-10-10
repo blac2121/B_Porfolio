@@ -6,24 +6,30 @@ const FooterContainer = styled.div`
   display: flex;
   width: 100vw;
   background-color: #9AB1A9;
+  align-items: center;
 `
 
 const AttributionContainer = styled.div`
-  flex-grow: 5;
-  padding-left: 50px;
-  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
+`
+
+const TaglineContainer = styled.div`
+  flex-grow: 1;
 `
 
 const IconContainer = styled.div`
   display: flex;
   flex-grow: 1;
-  margin: 15px;
-  align-items: center;
+  margin: 20px 50px;
+  justify-content: flex-end;
 `
 
 const AttributionText = styled.h6`
   font-size: 18px;
   color: #EEEEF2;
+  padding: 0px;
+  margin: 0px;
 `
 
 const IconDiv = styled.div`
@@ -43,10 +49,13 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <AttributionContainer>        
-        <span>Photo by <a href="https://unsplash.com/@pirye?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Amelie &amp; Niklas Ohlrogge</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+      <AttributionContainer> 
+        <AttributionText>Home Coverphoto by <a href="https://unsplash.com/@jessysmith?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jessy Smith</a> on <a href="https://unsplash.com/s/photos/white-office?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
+        <AttributionText>Library Coverphoto by <a href="https://unsplash.com/@pirye?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Amelie &amp; Niklas Ohlrogge</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
+      </AttributionContainer> 
+      <TaglineContainer>        
         <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
-      </AttributionContainer>
+      </TaglineContainer> 
       <IconContainer>
         <IconDiv>
           <a href="https://github.com/blac2121" target="_blank" >

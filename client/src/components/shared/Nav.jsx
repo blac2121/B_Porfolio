@@ -6,6 +6,7 @@ const NavContainer = styled.nav`
   display: flex;
   width: 100vw;
   background-color: #9AB1A9;
+  align-items: center;
 `
 
 const NavLinksContainer = styled.div`
@@ -14,7 +15,7 @@ const NavLinksContainer = styled.div`
 
 const HomeLink = styled.h1`
   font-size: 36px;
-  margin: 20px;
+  margin: 30px;
   color: #EEEEF2;
 `
 
@@ -28,7 +29,9 @@ const NavLinks = styled.p`
 const Nav = () => { 
   return (
     <NavContainer>
-      <Link to="/"><HomeLink>Home</HomeLink></Link>
+      <Link to="/">
+        <HomeLink>Home</HomeLink>
+      </Link>
       <NavLinksContainer>
         <Link to="/projects"><NavLinks>Projects</NavLinks></Link>   
         <Link to="/skills"><NavLinks>Skills</NavLinks></Link>
