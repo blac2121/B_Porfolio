@@ -5,8 +5,6 @@ const ProjectContainers = styled.div`
   width: 20vw;
   border-radius: 3px;
   margin: 20px;
-  background-color: #EEEEF2;
-  box-shadow: 2px 3px 6px 1px #516D63;
 
   :hover {
     transform: scale(1.03);
@@ -17,7 +15,9 @@ const ProjectDetailContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 25px;
+  align-items: center;
 `
+
 
 const HeaderContainer = styled.div`
   flex-grow: 1;
@@ -28,13 +28,11 @@ const DetailContainer = styled.div`
 `
 
 const ProjectTitles = styled.h4`
-  font-size: 24px;
-  color: #516D63;
+  font-size: 18px;
 `
 
 const ProjectText = styled.p`
   font-size: 18px;
-  color: #4A4C4B;
 `
 
 
@@ -43,7 +41,7 @@ const BookCard = (props) => {
     <ProjectContainers>
       <ProjectDetailContainer>
         <HeaderContainer>
-          {/* <img /> */}
+          <img src={props.img} alt={props.name}/>
         </HeaderContainer>
         <DetailContainer> 
           <ProjectTitles>{props.name}</ProjectTitles>
