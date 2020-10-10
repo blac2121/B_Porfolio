@@ -22,6 +22,7 @@ const Header = styled.h3`
 
 const SubHeader = styled.h4`
   font-size: 24px;
+  font-weight: 400;
   margin: 0;
 `
 
@@ -40,6 +41,7 @@ const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
   margin: 50px;
+  font-weight: 300;
 `
 
 const IconPanel = styled.div`
@@ -65,10 +67,10 @@ const Skills = () => {
         <SectionPanel>
           <SectionHeading>Languages</SectionHeading>
           <IconPanel>
-            <Icons className="devicon-html5-plain-wordmark colored"></Icons>
-            <Icons className="devicon-css3-plain-wordmark colored"></Icons>
-            <Icons className="devicon-javascript-plain colored"></Icons>
-            <Icons className="devicon-ruby-plain-wordmark colored"></Icons>
+            <Icons className="devicon-html5-plain-wordmark colored" />
+            <Icons className="devicon-css3-plain-wordmark colored" />
+            <Icons className="devicon-javascript-plain colored" />
+            <Icons className="devicon-ruby-plain-wordmark colored" />
             <Icons className="devicon-python-plain-wordmark" />
           </IconPanel>
         </SectionPanel>
