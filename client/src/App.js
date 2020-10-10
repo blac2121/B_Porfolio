@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from '../src/components/Home';
-import Library from '../src/components/Library';
+import Library from '../src/components/library/Library';
 import Projects from '../src/components/projects/Projects';
 import Skills from '../src/components/Skills';
 

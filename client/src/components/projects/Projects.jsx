@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
 `
 
 const Header = styled.h3`
-  font-size: 36px;
+  font-size: 48px;
 `
 
 const SubHeader = styled.h4`
@@ -25,19 +25,19 @@ const SubHeader = styled.h4`
 const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 50px;
 `
 
 const PracticePanel = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 30px;
 `
-
 
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 50px;
+  margin: 30px;
+  font-weight: 300;
 `
 
 const Cards = styled.div`

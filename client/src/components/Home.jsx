@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import coverphoto from '../assets/jessy-smith-zFOm6KzA-7g-unsplash.jpg';
 import profilephoto from '../assets/Brianna.jpg';
@@ -15,7 +14,8 @@ const AboutPanel = styled.div`
   margin: 50px 0;
   background-color: #DFE1E1;
   border: 2px solid #9AB1A9;
-  border-radius: 3px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #9AB1A9;
 `
 
 const AboutSubContainers = styled.div`
@@ -87,6 +87,7 @@ const ResumeButton = styled.button`
   margin: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
+  border-radius: 5px;
 
   :hover {
     transform: scale(1.1);
@@ -108,7 +109,7 @@ const Home = () => {
       <Panels>
         <Title>Skills</Title>       
         <CarouselContainer>
-          <Carousel itemsToShow={4} itemsToScroll={4} itemPadding={[50]}>
+          <Carousel itemsToShow={4} itemsToScroll={1} itemPadding={[50]} pagination={false}>
             <Icons className="devicon-react-original-wordmark"></Icons>
             <Icons className="devicon-html5-plain-wordmark"></Icons>
             <Icons className="devicon-css3-plain-wordmark"></Icons>
@@ -119,8 +120,12 @@ const Home = () => {
             <Icons className="devicon-express-original-wordmark colored"></Icons>
             <Icons className="devicon-mongodb-plain-wordmark"></Icons>
             <Icons className="devicon-nodejs-plain"></Icons>
-          </Carousel>          
+            <Icons className="devicon-python-plain-wordmark" />
+          </Carousel>                    
         </CarouselContainer>
+        <ButtonContainer>
+          <ResumeButton>See More</ResumeButton>
+        </ButtonContainer>
       </Panels>
       <AboutPanel>
         <Title>About Me</Title>
@@ -134,7 +139,7 @@ const Home = () => {
             </ButtonContainer>
           </AboutSubContainers>
           <AboutImgContainers>
-            <img src={profilephoto}/>
+            <img src={profilephoto} alt="Brianna Profile"/>
           </AboutImgContainers>
         </AboutContainer>
       </AboutPanel>
