@@ -53,7 +53,7 @@ const PracticeCards = styled.div`
   background-color: #DFE1E1;
   border: 2px solid #9AB1A9;
   padding-bottom: 70px;
-  box-shadow: 1px 1px 1px 1px #9AB1A9;
+  box-shadow: 2px 2px 2px 2px #DADAE3;
   border-radius: 5px;
 `
 

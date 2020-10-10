@@ -30,11 +30,6 @@ const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
   margin: 30px;
-  // background-color: #DFE1E1;
-  // border: 2px solid #9AB1A9;
-  // padding-bottom: 70px;
-  // box-shadow: 1px 1px 1px 1px #9AB1A9;
-  // border-radius: 5px;
 `
 
 const SectionHeading = styled.h4`
