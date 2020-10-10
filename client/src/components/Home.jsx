@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
@@ -112,7 +112,6 @@ const Icons = styled.i`
   font-size: 6rem;
 `
 
-
 const Home = () => { 
   return (
     <Layout>
@@ -138,7 +137,7 @@ const Home = () => {
         <ButtonContainer>
           <Link to='/skills'>
             <SeeMore>See More</SeeMore>
-          </Link>        
+          </Link>    
         </ButtonContainer>
       </Panels>
       <AboutPanel>
