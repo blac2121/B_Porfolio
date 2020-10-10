@@ -29,6 +29,10 @@ const MainContainer = styled.div`
   flex-direction: column;
   margin: 10px auto;
   margin-bottom: 50px;
+  // background-color: #F9F9FA;
+  // box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  // border: 1px solid #DFDFDF;
+  // background-color: #F9F9FA;
 `
 
 const Header = styled.h3`
@@ -50,13 +54,18 @@ const SubHeader = styled.h4`
 const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  width: 100%;
+  margin: 40px 0;
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 50px;
+  margin: 50px 0 20px 50px;
   font-weight: 300;
 `
 
@@ -64,7 +73,9 @@ const IconPanel = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-left: 20px;
+  margin-bottom: 55px;
   align-items: baseline;
+  justify-content: center;
 `
 
 const Icons = styled.i`

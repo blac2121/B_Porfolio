@@ -7,6 +7,7 @@ const NavContainer = styled.nav`
   width: 100vw;
   background-color: #9AB1A9;
   align-items: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const NavLinksContainer = styled.div`

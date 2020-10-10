@@ -51,19 +51,25 @@ const SubHeader = styled.h4`
 const SectionPanel = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 30px;
+  width: 100%;
+  margin: 40px 0;
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 50px;
+  margin: 50px 0 0 50px;
+  padding: 0px;
   font-weight: 300;
 `
 
 const IconPanel = styled.div`
   display: flex;
-  margin-left: 20px;
+  margin: 30px;
 `
 
 const Library = () => {

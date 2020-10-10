@@ -8,10 +8,7 @@ const ProjectContainers = styled.div`
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 1px solid #DFDFDF;
-
-  :hover {
-    transform: scale(1.03);
-  }
+  background-color: #F9F9FA;
 `
 
 const ProjectDetailContainer = styled.div`
