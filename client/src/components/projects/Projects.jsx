@@ -43,16 +43,27 @@ const SubHeader = styled.h4`
   color: #1D1D1D;
 `
 
+// const FeaturedPanel = styled.div`
+//   display: flex;
+//   flex-direction: column;
+// `
+
 const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin: 40px 0;
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
 `
 
-const PracticePanel = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
-`
+// const PracticePanel = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   margin: 30px;
+// `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
@@ -106,7 +117,6 @@ const Projects = () => {
       tech={project.fields.tech}
       highlight={project.fields.highlight}
       github={project.fields.github}
-      // project={project}
       id={project.id}
     />
   ));
@@ -142,10 +152,10 @@ const Projects = () => {
         <SectionHeading>Featured Projects</SectionHeading>
         <Cards>{featuredCardJSX}</Cards>         
       </FeaturedPanel>
-      <PracticePanel>       
+      <FeaturedPanel>       
         <SectionHeading>Practice Makes Perfect</SectionHeading>
         <PracticeCards>{practiceCardJSX}</PracticeCards>                
-      </PracticePanel> 
+      </FeaturedPanel> 
     </Layout>
   )
 }
