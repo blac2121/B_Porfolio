@@ -8,6 +8,10 @@ const ProjectDetailContainer = styled.div`
   width: 20vw;
   margin: 20px;
   align-items: center;
+
+  @media (max-width: 400px) {
+    width: 80vw;
+  }  
 `
 
 const HeaderContainer = styled.div`
