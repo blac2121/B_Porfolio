@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
@@ -58,6 +58,29 @@ const SeeMore = styled.p`
 `
 
 const Featured = (props) => {
+  const [techStack, setTechStack] = useState(""); 
+
+  useEffect(() => {
+    if (props.project) {
+      setTechStack(props.project.fields.tech)
+    }
+  }, [props.project]) 
+
+  console.log(techStack)
+
+  // const tagJSX = featured.map((project, index) => (
+  //   <FeaturedCard
+  //     key={index}
+  //     link={project.fields.link}
+  //     title={project.fields.title}
+  //     goal={project.fields.goal}
+  //     image={project.fields.image}
+  //     tech={project.fields.tech}
+  //     highlight={project.fields.highlight}
+  //     github={project.fields.github}
+  //     id={project.id}
+  //   />
+  // ));
   return (   
     <ProjectContainers>
       <ProjectDetailContainer>      

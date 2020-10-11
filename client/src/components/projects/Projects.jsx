@@ -92,7 +92,13 @@ const Projects = () => {
 
   useEffect(() => {
     const featuredProjects = projects.filter((element) => element.fields.type === "featured")
-    setFeatured(featuredProjects);
+    const sortedFeaturedProjects = featuredProjects.sort((a, b) => b.fields.order - a.fields.order)
+    
+    const featuredTech = featuredProjects.forEach(element => element.fields.tech.split(","));
+    // const getTechTiles = featuredProjects.split(",")
+    console.log(featuredTech)
+
+    setFeatured(sortedFeaturedProjects);
   }, [projects]);
     
   const featuredCardJSX = featured.map((project, index) => (
@@ -105,13 +111,15 @@ const Projects = () => {
       tech={project.fields.tech}
       highlight={project.fields.highlight}
       github={project.fields.github}
+      project={project}
       id={project.id}
     />
   ));
 
   useEffect(() => {
     const practiceProjects = projects.filter((element) => element.fields.type === "practice")
-    setPractice(practiceProjects);
+    const sortedPracticeProjects = practiceProjects.sort((a, b) => b.fields.order - a.fields.order)
+    setPractice(sortedPracticeProjects);
   }, [projects]);
 
   const practiceCardJSX = practice.map((project, index) => (
@@ -120,6 +128,7 @@ const Projects = () => {
       link={project.fields.link}
       title={project.fields.title}
       tech={project.fields.tech}
+      goal={project.fields.goal}
       highlight={project.fields.highlight}
       github={project.fields.github}
       id={project.id}
@@ -131,7 +140,7 @@ const Projects = () => {
       <CoverImage>  
         <Banner>
           <Header>Projects</Header>
-          <SubHeader>Concise Code - Detailed Design - Excellent Experiences</SubHeader>          
+          <SubHeader>Always coding with the users and my teammates in mind.</SubHeader>          
         </Banner>
       </CoverImage>
       <FeaturedPanel>

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
