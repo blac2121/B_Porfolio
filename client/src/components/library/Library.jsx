@@ -13,8 +13,9 @@ const CoverImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const Banner = styled.div`
@@ -70,13 +71,21 @@ const SectionHeading = styled.h4`
 const IconPanel = styled.div`
   display: flex;
   margin: 30px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }  
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }  
 `
 
 const Library = () => {
   const [books, setBooks] = useState([]);
   const [business, setBusiness] = useState([]);
   const [industry, setIndustry] = useState([]);
-  const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
     const getBooks = async () => {
@@ -89,7 +98,7 @@ const Library = () => {
       setBooks(response.data.records); 
     }
     getBooks();
-  }, [fetchEntries]);
+  }, []);
 
   useEffect(() => {
     const industryBooks = books.filter((element) => element.fields.category === "industry")
@@ -119,7 +128,6 @@ const Library = () => {
       id={book.id}
     />
   ));
-
 
   return (
     <Layout>

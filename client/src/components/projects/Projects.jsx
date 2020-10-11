@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Layout from '../shared/Layout';
 import styled from 'styled-components';
+
+import Layout from '../shared/Layout';
 import FeaturedCard from './FeaturedCard';
 import PracticeCard from './PracticeCard';
 
@@ -14,8 +15,9 @@ const CoverImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const Banner = styled.div`
@@ -43,21 +45,23 @@ const SubHeader = styled.h4`
   color: #1D1D1D;
 `
 
+
 const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
-`
-
-const PracticePanel = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 30px;
+  width: 100%;
+  margin: 80px 0;
+  background-color: #F9F9FA;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  border: 1px solid #DFDFDF;
+  background-color: #F9F9FA;
+  padding-bottom: 60px;
 `
 
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 30px;
+  margin: 50px 0 20px 50px;
   font-weight: 300;
 `
 
@@ -69,13 +73,21 @@ const Cards = styled.div`
 const PracticeCards = styled.div`
   display: flex;
   justify-content: center;
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+  }  
 `
 
 const Projects = () => { 
   const [projects, setProjects] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [practice, setPractice] = useState([]);
-  const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
     const getProjects = async () => {
@@ -88,11 +100,12 @@ const Projects = () => {
       setProjects(response.data.records); 
     }
     getProjects();
-  }, [fetchEntries]);
+  }, []);
 
   useEffect(() => {
     const featuredProjects = projects.filter((element) => element.fields.type === "featured")
-    setFeatured(featuredProjects);
+    const sortedFeaturedProjects = featuredProjects.sort((a, b) => b.fields.order - a.fields.order)
+    setFeatured(sortedFeaturedProjects);
   }, [projects]);
     
   const featuredCardJSX = featured.map((project, index) => (
@@ -111,7 +124,8 @@ const Projects = () => {
 
   useEffect(() => {
     const practiceProjects = projects.filter((element) => element.fields.type === "practice")
-    setPractice(practiceProjects);
+    const sortedPracticeProjects = practiceProjects.sort((a, b) => b.fields.order - a.fields.order)
+    setPractice(sortedPracticeProjects);
   }, [projects]);
 
   const practiceCardJSX = practice.map((project, index) => (
@@ -120,6 +134,7 @@ const Projects = () => {
       link={project.fields.link}
       title={project.fields.title}
       tech={project.fields.tech}
+      goal={project.fields.goal}
       highlight={project.fields.highlight}
       github={project.fields.github}
       id={project.id}
@@ -131,17 +146,21 @@ const Projects = () => {
       <CoverImage>  
         <Banner>
           <Header>Projects</Header>
-          <SubHeader>Concise Code - Detailed Design - Excellent Experiences</SubHeader>          
+          <SubHeader>Always coding with the users and my teammates in mind.</SubHeader>          
         </Banner>
       </CoverImage>
       <FeaturedPanel>
         <SectionHeading>Featured Projects</SectionHeading>
-        <Cards>{featuredCardJSX}</Cards>         
+        <Cards>
+          {featuredCardJSX}
+        </Cards>         
       </FeaturedPanel>
-      <PracticePanel>       
+      <FeaturedPanel>       
         <SectionHeading>Practice Makes Perfect</SectionHeading>
-        <PracticeCards>{practiceCardJSX}</PracticeCards>                
-      </PracticePanel> 
+        <PracticeCards>
+          {practiceCardJSX}
+        </PracticeCards>                
+      </FeaturedPanel> 
     </Layout>
   )
 }

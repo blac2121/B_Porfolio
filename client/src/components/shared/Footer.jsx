@@ -7,15 +7,32 @@ const FooterContainer = styled.div`
   width: 100vw;
   background-color: #9AB1A9;
   align-items: center;
+  padding: 20px 0;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }  
 `
 
 const AttributionContainer = styled.div`
   flex-grow: 1;
   padding-left: 30px;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    padding: 0;
+    margin-top: 20px;
+  }  
 `
 
 const TaglineContainer = styled.div`
   flex-grow: 1;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+    margin-top: 20px;
+  }  
 `
 
 const IconContainer = styled.div`
@@ -60,12 +77,12 @@ const Footer = () => {
       </TaglineContainer> 
       <IconContainer>
         <IconDiv>
-          <a href="https://github.com/blac2121" target="_blank" >
+          <a href="https://github.com/blac2121" target="_blank" rel="noopener noreferrer" >
             <Icons className="devicon-github-plain-wordmark" />
           </a>     
         </IconDiv>
         <IconDiv>     
-          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" >
+          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" rel="noopener noreferrer" >
             <Icons className="devicon-linkedin-plain" />
           </a> 
         </IconDiv>        
