@@ -72,7 +72,7 @@ const IconPanel = styled.div`
   margin-left: 20px;
   margin-bottom: 55px;
   align-items: baseline;
-  justify-content: center;
+  justify-content: center;  
 `
 
 const Icons = styled.i`

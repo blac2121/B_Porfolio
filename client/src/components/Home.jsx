@@ -128,6 +128,7 @@ const SeeMore = styled.p`
   color: #9AB1A9;
   cursor: pointer;
   font-size: 24px;
+  margin-top: 50px;
 
   :hover {
     transform: scale(1.1);
