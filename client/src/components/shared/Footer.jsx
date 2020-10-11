@@ -60,12 +60,12 @@ const Footer = () => {
       </TaglineContainer> 
       <IconContainer>
         <IconDiv>
-          <a href="https://github.com/blac2121" target="_blank" >
+          <a href="https://github.com/blac2121" target="_blank" rel="noopener noreferrer" >
             <Icons className="devicon-github-plain-wordmark" />
           </a>     
         </IconDiv>
         <IconDiv>     
-          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" >
+          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" rel="noopener noreferrer" >
             <Icons className="devicon-linkedin-plain" />
           </a> 
         </IconDiv>        

@@ -18,6 +18,10 @@ const CoverImage = styled.div`
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 400px) {
+    align-self: flex-start;
+  }
 `
 
 const Banner = styled.div`

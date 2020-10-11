@@ -79,6 +79,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [practice, setPractice] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(true);
   const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
@@ -90,6 +91,7 @@ const Projects = () => {
         },
       });
       setProjects(response.data.records); 
+      setIsLoaded(true)
     }
     getProjects();
   }, [fetchEntries]);
@@ -133,14 +135,6 @@ const Projects = () => {
     />
   ));
 
-  if (!featured) {
-    <h3>Loading...</h3>
-  }
-
-  if (!practice) {
-    <h3>Loading...</h3>
-  }
-
   return (
     <Layout>
       <CoverImage>  
@@ -151,11 +145,15 @@ const Projects = () => {
       </CoverImage>
       <FeaturedPanel>
         <SectionHeading>Featured Projects</SectionHeading>
-        <Cards>{featuredCardJSX}</Cards>         
+        <Cards>
+          {featuredCardJSX}
+        </Cards>         
       </FeaturedPanel>
       <FeaturedPanel>       
         <SectionHeading>Practice Makes Perfect</SectionHeading>
-        <PracticeCards>{practiceCardJSX}</PracticeCards>                
+        <PracticeCards>
+          {practiceCardJSX}
+        </PracticeCards>                
       </FeaturedPanel> 
     </Layout>
   )
