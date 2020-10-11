@@ -13,13 +13,6 @@ const FooterContainer = styled.div`
     flex-direction: column-reverse;
     align-items: center;
   }  
-
-  // @media (max-width: 400px) {
-  //   width: 225px;
-  //   height: 125px;
-  //   padding: 10px;
-  //   margin: 5px;
-  // }  
 `
 
 const AttributionContainer = styled.div`
