@@ -71,6 +71,15 @@ const SectionHeading = styled.h4`
 const IconPanel = styled.div`
   display: flex;
   margin: 30px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }  
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }  
 `
 
 const Library = () => {
