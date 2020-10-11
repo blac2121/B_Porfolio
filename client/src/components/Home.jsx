@@ -10,8 +10,8 @@ import Zoom from 'react-reveal/Zoom';
 
 const CoverImage = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  // flex-direction: column;
+  // justify-content: center;
   background: url(https://i.imgur.com/4NEYM67.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -35,16 +35,17 @@ const CoverImage = styled.div`
   
 `
 
+const EmptyBanner = styled.div`
+  width: 50%;
+`
+
 const Banner = styled.div`
   display: flex;
   flex-direction: column;
+  align-content: center;
+  align-items: center;
   justify-content: center;
-  align-items: flex-end;
-
-  width: 100%;
-  height: 650px;
-  background: rgba(239, 239, 242, 0.1);
-  padding-left: 10px;
+  width: 50%;
 
   @media (max-width: 1024px) {
     height: 400px;
@@ -59,9 +60,10 @@ const Banner = styled.div`
 `
 
 const HeaderTitle = styled.h3`
-  font-size: 42px;
+  font-size: 48px;
   text-align: center;
   color: white;
+
 
   @media (max-width: 1024px) {
     color: black;
@@ -75,8 +77,9 @@ const HeaderTitle = styled.h3`
 `
 
 const HeaderAboutText = styled.p`
-  font-size: 20px;
+  font-size: 32px;
   color: white;
+  padding: 0 0 30px 0;
 
   @media (max-width: 1024px) {
     color: black;
@@ -86,6 +89,18 @@ const HeaderAboutText = styled.p`
     margin-top: 35px;
   }  
 `
+
+const HeaderButtonContainer = styled.div`
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  // padding-right: 125px;
+
+  @media (max-width: 400px) {
+    flex-direction: column;   
+  }  
+`
+
 
 const Panels = styled.div`
   margin: 50px 0;
@@ -182,14 +197,6 @@ const HeaderSeeMore = styled.p`
     color: black;
   }  
 `
-const HeaderButtonContainer = styled.div`
-  display: flex;
-  align-items: center; 
-
-  @media (max-width: 400px) {
-    flex-direction: column;   
-  }  
-`
 
 const ButtonContainer = styled.div`
   text-align: center;
@@ -273,6 +280,7 @@ const Home = () => {
     <Layout>
       <div>
         <CoverImage>
+          <EmptyBanner></EmptyBanner>          
           <Banner>
             <div>
               <HeaderTitle>Welcome, I'm Brianna!</HeaderTitle>
