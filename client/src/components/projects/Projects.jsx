@@ -93,11 +93,6 @@ const Projects = () => {
   useEffect(() => {
     const featuredProjects = projects.filter((element) => element.fields.type === "featured")
     const sortedFeaturedProjects = featuredProjects.sort((a, b) => b.fields.order - a.fields.order)
-    
-    const featuredTech = featuredProjects.forEach(element => element.fields.tech.split(","));
-    // const getTechTiles = featuredProjects.split(",")
-    console.log(featuredTech)
-
     setFeatured(sortedFeaturedProjects);
   }, [projects]);
     
@@ -111,7 +106,7 @@ const Projects = () => {
       tech={project.fields.tech}
       highlight={project.fields.highlight}
       github={project.fields.github}
-      project={project}
+      // project={project}
       id={project.id}
     />
   ));

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Tags from './Tags'
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
@@ -46,41 +47,59 @@ const ButtonContainers = styled.div`
   justify-content: center;
 `
 
-const SeeMore = styled.p`
-  color: #67867B;
-  cursor: pointer;
+// const SeeMore = styled.p`
+//   color: #67867B;
+//   cursor: pointer;
+//   font-size: 24px;
+//   margin: 20px;
+
+//   :hover {
+//     transform: scale(1.1);
+//   }
+// `
+
+const SeeMore = styled.button`
+  border: none;
+  background-color: #9AB1A9;
+  color: #EEEEF2;
+  padding: 12px;
+  width: 125px;
+  text-align: center;
+  text-decoration: none;
   font-size: 24px;
-  margin: 20px;
+  margin: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
 
   :hover {
     transform: scale(1.1);
+    background-color: #67867B;
   }
+`
+
+const TagContainer = styled.div`
+  display: flex;
 `
 
 const Featured = (props) => {
   const [techStack, setTechStack] = useState(""); 
 
   useEffect(() => {
-    if (props.project) {
-      setTechStack(props.project.fields.tech)
-    }
-  }, [props.project]) 
+    if (props.tech) {
+      setTechStack(props.tech)
+    }   
+  }, [props.tech]) 
 
-  console.log(techStack)
+  const getTechArr = techStack.split(",");
 
-  // const tagJSX = featured.map((project, index) => (
-  //   <FeaturedCard
-  //     key={index}
-  //     link={project.fields.link}
-  //     title={project.fields.title}
-  //     goal={project.fields.goal}
-  //     image={project.fields.image}
-  //     tech={project.fields.tech}
-  //     highlight={project.fields.highlight}
-  //     github={project.fields.github}
-  //     id={project.id}
-  //   />
-  // ));
+  const TagsJSX = getTechArr.map((tag, index) => (
+    <Tags
+      key={index}
+      label={tag}
+    />
+  ));
+
   return (   
     <ProjectContainers>
       <ProjectDetailContainer>      
@@ -88,7 +107,9 @@ const Featured = (props) => {
         <hr></hr>
         <ProjectText>{props.goal}</ProjectText>
         <ProjectText>{props.highlight}</ProjectText>
-        <ProjectText>{props.tech}</ProjectText>        
+        <TagContainer>
+          {TagsJSX}
+        </TagContainer>       
       </ProjectDetailContainer>
       <ImgButtonContainer>
         <ProjectCoverPhotos src={props.image} />

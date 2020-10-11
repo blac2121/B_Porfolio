@@ -22,7 +22,7 @@ const HeaderContainer = styled.div`
 `
 
 const DetailContainer = styled.div`
-  flex-grow: 2;
+  flex-grow: 3;
 `
 
 const ProjectTitles = styled.h4`
@@ -39,7 +39,7 @@ const ButtonContainer = styled.div`
   display: flex;
   margin: 10px;
   justify-content: center;
-  flex-grow: 2;
+  flex-grow: 1;
 `
 
 const ProjectButtons = styled.button`
