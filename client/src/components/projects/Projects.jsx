@@ -68,7 +68,7 @@ const FeaturedPanel = styled.div`
 const SectionHeading = styled.h4`
   font-size: 36px;
   color: #4A4C4B;
-  margin: 30px;
+  margin: 50px 0 20px 50px;
   font-weight: 300;
 `
 

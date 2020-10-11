@@ -3,10 +3,43 @@ import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
-import coverphoto from '../assets/Screen Shot 2020-10-10 at 3.39.18 PM.png';
 import profilephoto from '../assets/Brianna.jpg';
 import resumedoc from '../assets/LaCasse-Resume.pdf';
 
+
+const CoverImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(https://i.imgur.com/4NEYM67.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 650px;
+  margin: 0 auto;
+  text-align: center;
+`
+
+const Banner = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 650px;
+  background: rgba(239, 239, 242, 0.1);
+  padding-left: 10px;
+`
+
+const HeaderTitle = styled.h3`
+  font-size: 42px;
+  text-align: center;
+  color: white;
+`
+
+const HeaderAboutText = styled.p`
+  font-size: 24px;
+  color: white;
+`
 
 const Panels = styled.div`
   margin: 50px 0;
@@ -44,11 +77,6 @@ const AboutText = styled.p`
   font-size: 24px;
 `
 
-const CoverImage = styled.img`
-  width: 100%;
-  height: 750px;
-`
-
 const CarouselContainer = styled.div`
 
 .rec.rec-arrow {
@@ -75,11 +103,36 @@ const SeeMore = styled.p`
   :hover {
     transform: scale(1.1);
     color: #67867B;
+    text-decoration: underline;
   }
+`
+const HeaderButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
 `
 
 const ButtonContainer = styled.div`
   text-align: center;
+`
+
+const HeaderResumeButton = styled.button`
+  border: none;
+  background-color: #9AB1A9;
+  color: #EEEEF2;
+  padding: 20px 36px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 30px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+
+  :hover {
+    transform: scale(1.1);
+    background-color: #67867B;
+  }
 `
 
 const ResumeButton = styled.button`
@@ -110,7 +163,22 @@ const Home = () => {
   return (
     <Layout>
       <div>
-        <CoverImage src={coverphoto} alt="Cover Photo" />
+        <CoverImage>
+          <Banner>
+            <div>
+              <HeaderTitle>Welcome, I'm Brianna!</HeaderTitle>
+              <HeaderAboutText>Let's build user centric, <br></br> scalable solutions together</HeaderAboutText>              
+            </div>
+            <HeaderButtonContainer>
+              <a href={resumedoc} download="LaCasse Resume">
+                <HeaderResumeButton>Resume</HeaderResumeButton>
+              </a>  
+              <Link to='/projects'>
+                <SeeMore>Projects</SeeMore>
+              </Link>  
+            </HeaderButtonContainer>
+          </Banner>
+        </CoverImage>
       </div>
       <Panels>
         <Title>Skills</Title>       
