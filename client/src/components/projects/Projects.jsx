@@ -54,6 +54,7 @@ const FeaturedPanel = styled.div`
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 1px solid #DFDFDF;
   background-color: #F9F9FA;
+  padding-bottom: 60px;
 `
 
 const SectionHeading = styled.h4`

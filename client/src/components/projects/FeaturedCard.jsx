@@ -16,7 +16,6 @@ const ProjectDetailContainer = styled.div`
   margin: 35px;
 `
 
-
 const ProjectTitles = styled.h4`
   font-size: 28px;
   color: #516D63;
@@ -41,22 +40,18 @@ const ImgButtonContainer = styled.div`
   justify-content: space-around;
 `
 
+const ImgContainer = styled.div`
+  display: flex;
+  flex-grow: 2;
+  align-items: flex-end;
+`
+
 const ButtonContainers = styled.div`
   display: flex;
   margin: 10px;
   justify-content: center;
+  flex-grow: 1;
 `
-
-// const SeeMore = styled.p`
-//   color: #67867B;
-//   cursor: pointer;
-//   font-size: 24px;
-//   margin: 20px;
-
-//   :hover {
-//     transform: scale(1.1);
-//   }
-// `
 
 const SeeMore = styled.button`
   border: none;
@@ -112,7 +107,9 @@ const Featured = (props) => {
         </TagContainer>       
       </ProjectDetailContainer>
       <ImgButtonContainer>
-        <ProjectCoverPhotos src={props.image} />
+        <ImgContainer>
+          <ProjectCoverPhotos src={props.image} />
+        </ImgContainer>
         <ButtonContainers>
           <a href={props.link} target="_blank" rel="noopener noreferrer">
             <SeeMore>Live Site</SeeMore>
