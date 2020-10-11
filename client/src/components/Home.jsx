@@ -4,7 +4,7 @@ import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
 import styled from 'styled-components';
 import profilephoto from '../assets/Brianna.jpg';
-import resumedoc from '../assets/LaCasse-Resume.pdf';
+import resumedoc from '../assets/LaCasse Resume.pdf';
 
 
 const CoverImage = styled.div`
@@ -277,9 +277,7 @@ const Home = () => {
         <AboutContainer>
           <AboutSubContainers>
             <SubTitle>Hi, I'm Brianna!</SubTitle>
-            <AboutText>Welcome!  For me, creating and ensuring the best user experiences forms the core of a successful product. Over the years, my time spent on agile teams revealed the importance of quality, detail, design, and customer perspective in developing delightful experiences. My journey started 6 years ago  as a Quality Assurance Analyst where I stepped into my first experience with agile teams and ensured users had nothing but the best experiences. I've been in love with user experiences ever since! <br></br> <br></br> After two years I moved into a Business Analyst role where I more closely focused on crafting which products to build and what features to include. Over the course of almost 4 years as a Business Analyst and Product Manager, I spent countless hours conducting client interviews, constructing user journey maps, iterating on white-board designs, and advocating for the best products users wanted and needed. <br></br> <br></br> After reading <i>The Lean Startup</i> by Eric Ries (twice), I wanted to give coding a try. I love solving user problems and thought being able to code would be an even deeper connection to the user experience. I scoured the internet for a software bootcamp I thought would be the right fit for me and found the Software Engineer Immersive course offered by General Assembly to be the perfect fit. I spent over 500 hours over 12 weeks learning, practicing, and tackling code. <br></br> <br></br> I’m excited to embark on the next iteration of my tech journey as a Software Engineer, creating beautiful user products with the perfect market fit!</AboutText>  
-
-            
+            <AboutText>Over the years, my time spent on agile teams revealed the importance of quality, detail, design, and customer perspective in developing delightful experiences. My journey started 6 years ago  as a Quality Assurance Analyst where I stepped into my first experience with agile teams and ensured users had nothing but the best experiences. I've been in love with user experiences ever since! <br></br> <br></br> After two years I moved into a Business Analyst role where I more closely focused on crafting which products to build and what features to include. Over the course of almost 4 years as a Business Analyst and Product Manager, I spent countless hours conducting client interviews, constructing user journey maps, iterating on white-board designs, and advocating for the best products users wanted and needed. <br></br> <br></br> After reading <i>The Lean Startup</i> by Eric Ries (twice), I wanted to give coding a try. I love solving user problems and thought being able to code would be an even deeper connection to the user experience. I scoured the internet for a software bootcamp I thought would be the right fit for me and found the Software Engineer Immersive course offered by General Assembly to be the perfect fit. I spent over 500 hours over 12 weeks learning, practicing, and tackling code. <br></br> <br></br> I’m excited to embark on the next iteration of my tech journey as a Software Engineer, creating beautiful user products with the perfect market fit!</AboutText>  
             <ButtonContainer>
               <a href={resumedoc} download="LaCasse Resume">
                 <ResumeButton>Resume</ResumeButton>
