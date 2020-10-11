@@ -221,6 +221,14 @@ const Icons = styled.i`
 `
 
 const Home = () => { 
+
+  const breakPoints = [
+    { width: 400, itemsToShow: 1 },
+    { width: 500, itemsToShow: 2 },
+    { width: 600, itemsToShow: 3 },
+    { width: 700, itemsToShow: 4 },
+  ];
+
   return (
     <Layout>
       <div>
@@ -244,7 +252,7 @@ const Home = () => {
       <Panels>
         <Title>Skills</Title>       
         <CarouselContainer>
-          <Carousel itemsToShow={4} itemsToScroll={1} itemPadding={[50]} pagination={false}>
+          <Carousel itemsToShow={4} itemsToScroll={1} pagination={false} breakPoints={breakPoints}>
             <Icons className="devicon-react-original-wordmark"></Icons>
             <Icons className="devicon-ruby-plain-wordmark"></Icons>
             <Icons className="devicon-rails-plain-wordmark"></Icons>
@@ -284,7 +292,7 @@ const Home = () => {
       <Panels>
         <Title>Library</Title>       
         <CarouselContainer>
-          <Carousel itemsToShow={4} itemsToScroll={1} itemPadding={[50]} pagination={false}>
+          <Carousel itemsToShow={4} itemsToScroll={1} pagination={false} breakPoints={breakPoints}>
             <img src="https://i.imgur.com/qSrMGM4.png" alt="The Pragmatic Programmer" />
             <img src="https://i.imgur.com/s6tgKdY.png" alt="The Lean Startup" />
             <img src="https://i.imgur.com/fFhqO1e.png" alt="The Lean Product Playbook" />
