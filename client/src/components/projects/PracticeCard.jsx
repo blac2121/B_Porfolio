@@ -71,6 +71,12 @@ const ProjectButtons = styled.button`
     transform: scale(1.1);
     background-color: #67867B;
   }
+
+  :focus {
+    outline: none;
+    border: 3px solid #67867B;
+    border-radius: 5px;
+  }
 `
 
 const Practice = (props) => {
