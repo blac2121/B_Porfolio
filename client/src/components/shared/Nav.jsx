@@ -27,6 +27,10 @@ const HomeLink = styled.h1`
   :hover {
     transform: scale(1.1);
   }
+
+  @media (max-width: 400px) {
+    margin: 10px;
+  }  
 `
 
 const NavLinks = styled.p`
@@ -37,6 +41,11 @@ const NavLinks = styled.p`
   :hover {
     transform: scale(1.1);
   }
+
+  @media (max-width: 400px) {
+    padding: 0;
+    margin: 10px;
+  }  
 `
 
 
