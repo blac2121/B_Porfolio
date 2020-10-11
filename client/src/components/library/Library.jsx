@@ -77,7 +77,6 @@ const Library = () => {
   const [books, setBooks] = useState([]);
   const [business, setBusiness] = useState([]);
   const [industry, setIndustry] = useState([]);
-  const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
     const getBooks = async () => {
@@ -90,7 +89,7 @@ const Library = () => {
       setBooks(response.data.records); 
     }
     getBooks();
-  }, [fetchEntries]);
+  }, []);
 
   useEffect(() => {
     const industryBooks = books.filter((element) => element.fields.category === "industry")
@@ -120,14 +119,6 @@ const Library = () => {
       id={book.id}
     />
   ));
-
-  // if (!business) {
-  //   <h3>Loading...</h3>
-  // }
-
-  // if (!industry) {
-  //   <h3>Loading...</h3>
-  // }
 
   return (
     <Layout>

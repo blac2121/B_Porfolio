@@ -79,8 +79,6 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [featured, setFeatured] = useState([]);
   const [practice, setPractice] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(true);
-  const [fetchEntries, setFetchEntries] = useState(false);
 
   useEffect(() => {
     const getProjects = async () => {
@@ -91,10 +89,9 @@ const Projects = () => {
         },
       });
       setProjects(response.data.records); 
-      setIsLoaded(true)
     }
     getProjects();
-  }, [fetchEntries]);
+  }, []);
 
   useEffect(() => {
     const featuredProjects = projects.filter((element) => element.fields.type === "featured")
