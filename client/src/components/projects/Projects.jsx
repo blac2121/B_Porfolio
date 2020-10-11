@@ -133,6 +133,10 @@ const Projects = () => {
     />
   ));
 
+  if (!featured) {
+    <h3>Loading...</h3>
+  }
+
   return (
     <Layout>
       <CoverImage>  
