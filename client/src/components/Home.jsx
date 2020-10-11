@@ -141,10 +141,18 @@ const HeaderSeeMore = styled.p`
   @media (max-width: 1024px) {
     color: white;
   } 
+
+  @media (max-width: 400px) {
+    color: black;
+  }  
 `
 const HeaderButtonContainer = styled.div`
   display: flex;
   align-items: center; 
+
+  @media (max-width: 400px) {
+    flex-direction: column;   
+  }  
 `
 
 const ButtonContainer = styled.div`
@@ -173,6 +181,10 @@ const HeaderResumeButton = styled.button`
   @media (max-width: 1024px) {
     color: black;
   } 
+
+  @media (max-width: 400px) {
+    margin: 0;
+  }  
 `
 
 const ResumeButton = styled.button`
