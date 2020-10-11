@@ -12,15 +12,9 @@ const ProjectContainers = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    flex-direction: column-reverse;
     width: 80vw;
   }
-
-  @media (max-width: 400px) {
-    flex-direction: column-reverse;
-    align-items: center;
-    width: 80vw;
-  }  
-
 `
 
 const ProjectDetailContainer = styled.div`
@@ -48,6 +42,13 @@ const ProjectCoverPhotos = styled.img`
   padding: 20px;
   margin: 10px;
 
+  @media (max-width: 1024px) {
+    width: 425px;
+    height: 325px;
+    padding: 10px;
+    margin: 5px;
+  }  
+
   @media (max-width: 400px) {
     width: 225px;
     height: 125px;
@@ -60,7 +61,7 @@ const ImgButtonContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  @media (max-width: 400px) {
+  @media (max-width: 1200px) {
     align-items: center;
   } 
 `
