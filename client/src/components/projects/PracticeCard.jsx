@@ -7,8 +7,19 @@ const ProjectContainers = styled.div`
   margin: 20px;
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-  border: 1px solid #DFDFDF;
+  border: 3px solid #DFDFDF;
   background-color: #F9F9FA;
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+  }  
 `
 
 const ProjectDetailContainer = styled.div`
@@ -22,7 +33,7 @@ const HeaderContainer = styled.div`
 `
 
 const DetailContainer = styled.div`
-  flex-grow: 2;
+  flex-grow: 3;
 `
 
 const ProjectTitles = styled.h4`
@@ -39,7 +50,7 @@ const ButtonContainer = styled.div`
   display: flex;
   margin: 10px;
   justify-content: center;
-  flex-grow: 2;
+  flex-grow: 1;
 `
 
 const ProjectButtons = styled.button`
@@ -60,6 +71,12 @@ const ProjectButtons = styled.button`
     transform: scale(1.1);
     background-color: #67867B;
   }
+
+  :focus {
+    outline: none;
+    border: 3px solid #67867B;
+    border-radius: 5px;
+  }
 `
 
 const Practice = (props) => {
@@ -70,9 +87,10 @@ const Practice = (props) => {
           <ProjectTitles>{props.title}</ProjectTitles>
           <hr></hr>
         </HeaderContainer>
-        <DetailContainer>  
-          <ProjectText>{props.tech}</ProjectText>                          
-          <ProjectText>{props.highlight}</ProjectText>          
+        <DetailContainer> 
+          <ProjectText>{props.goal}</ProjectText>
+          <ProjectText>{props.highlight}</ProjectText> 
+          <ProjectText>{props.tech}</ProjectText>                                             
         </DetailContainer>
         <ButtonContainer>
           <a href={props.github} target="_blank"rel="noopener noreferrer">

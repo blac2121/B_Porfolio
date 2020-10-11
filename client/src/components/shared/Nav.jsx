@@ -8,6 +8,11 @@ const NavContainer = styled.nav`
   background-color: #9AB1A9;
   align-items: center;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }  
 `
 
 const NavLinksContainer = styled.div`
