@@ -148,6 +148,10 @@ const Skills = () => {
             <Icons className="devicon-yarn-plain-wordmark colored" />
             <Icons className="devicon-npm-original-wordmark colored" />
             <Icons className="devicon-github-plain-wordmark colored" />
+            <Icons className="devicon-confluence-plain-wordmark colored" />
+            <Icons className="devicon-apple-original colored" />
+            <Icons className="devicon-trello-plain colored" />
+            <Icons className="devicon-slack-plain-wordmark colored" />
           </IconPanel> 
         </SectionPanel>
       </MainContainer>

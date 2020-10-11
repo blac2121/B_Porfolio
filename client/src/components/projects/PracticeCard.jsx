@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Tags from './Tags';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
@@ -78,7 +79,33 @@ const ProjectButtons = styled.button`
   }
 `
 
+const TagContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+  }  
+`
+
 const Practice = (props) => {
+  const [techStack, setTechStack] = useState(""); 
+
+  useEffect(() => {
+    if (props.tech) {
+      setTechStack(props.tech)
+    }   
+  }, [props.tech]) 
+
+  const getTechArr = techStack.split(",");
+
+  const TagsJSX = getTechArr.map((tag, index) => (
+    <Tags
+      key={index}
+      label={tag}
+    />
+  ));
+
   return (
     <ProjectContainers>
       <ProjectDetailContainer>
@@ -89,7 +116,9 @@ const Practice = (props) => {
         <DetailContainer> 
           <ProjectText>{props.goal}</ProjectText>
           <ProjectText>{props.highlight}</ProjectText> 
-          <ProjectText>{props.tech}</ProjectText>                                             
+          <TagContainer>
+            {TagsJSX}
+          </TagContainer>                                              
         </DetailContainer>
         <ButtonContainer>
           <a href={props.github} target="_blank"rel="noopener noreferrer">

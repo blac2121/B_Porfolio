@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Tags from './Tags'
+import Tags from './Tags';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
