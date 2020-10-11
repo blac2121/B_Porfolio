@@ -23,6 +23,14 @@ const CoverImage = styled.div`
     height: 400px;
     align-items: center;
   }  
+
+  @media (max-width: 400px) {
+    background: url(https://i.imgur.com/BHAYUFG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 339px;
+  }  
+  
 `
 
 const Banner = styled.div`
@@ -36,9 +44,14 @@ const Banner = styled.div`
   padding-left: 10px;
 
   @media (max-width: 1024px) {
-    height: 450px;
+    height: 400px;
     justify-content: flex-start;
     background: rgba(239, 239, 242, 0.6);
+  }  
+
+  @media (max-width: 400px) {
+    height: 339px;
+    background: rgba(239, 239, 242, 0.7);
   }  
 `
 
@@ -50,14 +63,24 @@ const HeaderTitle = styled.h3`
   @media (max-width: 1024px) {
     color: black;
   } 
+
+  @media (max-width: 400px) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 32px;
+  }  
 `
 
 const HeaderAboutText = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   color: white;
 
   @media (max-width: 1024px) {
     color: black;
+  }  
+
+  @media (max-width: 400px) {
+    margin-top: 35px;
   }  
 `
 
@@ -200,6 +223,7 @@ const HeaderResumeButton = styled.button`
 
   @media (max-width: 400px) {
     margin: 0;
+    margin-top: 10px;
   }  
 `
 
