@@ -19,9 +19,10 @@ const CoverImage = styled.div`
   text-align: center;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 
-  @media (max-width: 400px) {
-    align-self: flex-start;
-  }
+  @media (max-width: 1024px) {
+    height: 400px;
+    align-items: center;
+  }  
 `
 
 const Banner = styled.div`
@@ -33,17 +34,31 @@ const Banner = styled.div`
   height: 650px;
   background: rgba(239, 239, 242, 0.1);
   padding-left: 10px;
+
+  @media (max-width: 1024px) {
+    height: 450px;
+    justify-content: flex-start;
+    background: rgba(239, 239, 242, 0.6);
+  }  
 `
 
 const HeaderTitle = styled.h3`
   font-size: 42px;
   text-align: center;
   color: white;
+
+  @media (max-width: 1024px) {
+    color: black;
+  } 
 `
 
 const HeaderAboutText = styled.p`
   font-size: 24px;
   color: white;
+
+  @media (max-width: 1024px) {
+    color: black;
+  }  
 `
 
 const Panels = styled.div`
@@ -111,9 +126,25 @@ const SeeMore = styled.p`
     text-decoration: underline;
   }
 `
+
+const HeaderSeeMore = styled.p`
+  color: #9AB1A9;
+  cursor: pointer;
+  font-size: 24px;
+
+  :hover {
+    transform: scale(1.1);
+    color: #67867B;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    color: white;
+  } 
+`
 const HeaderButtonContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: center; 
 `
 
 const ButtonContainer = styled.div`
@@ -138,6 +169,10 @@ const HeaderResumeButton = styled.button`
     transform: scale(1.1);
     background-color: #67867B;
   }
+
+  @media (max-width: 1024px) {
+    color: black;
+  } 
 `
 
 const ResumeButton = styled.button`
@@ -179,7 +214,7 @@ const Home = () => {
                 <HeaderResumeButton>Resume</HeaderResumeButton>
               </a>  
               <Link to='/projects'>
-                <SeeMore>Projects</SeeMore>
+                <HeaderSeeMore>Projects</HeaderSeeMore>
               </Link>  
             </HeaderButtonContainer>
           </Banner>
