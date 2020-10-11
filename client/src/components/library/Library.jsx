@@ -121,6 +121,13 @@ const Library = () => {
     />
   ));
 
+  if (!business) {
+    <h3>Loading...</h3>
+  }
+
+  if (!industry) {
+    <h3>Loading...</h3>
+  }
 
   return (
     <Layout>

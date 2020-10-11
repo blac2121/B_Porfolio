@@ -137,6 +137,10 @@ const Projects = () => {
     <h3>Loading...</h3>
   }
 
+  if (!practice) {
+    <h3>Loading...</h3>
+  }
+
   return (
     <Layout>
       <CoverImage>  
