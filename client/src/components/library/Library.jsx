@@ -58,6 +58,11 @@ const SectionPanel = styled.div`
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 1px solid #DFDFDF;
   background-color: #F9F9FA;
+
+  @media (max-width: 400px) {
+    width: 95vw;
+    margin: 30px auto;
+  }
 `
 
 const SectionHeading = styled.h4`
@@ -66,6 +71,11 @@ const SectionHeading = styled.h4`
   margin: 50px 0 0 50px;
   padding: 0px;
   font-weight: 300;
+
+  @media (max-width: 400px) {
+    margin: 50px auto 10px;
+    text-align: center;
+  } 
 `
 
 const IconPanel = styled.div`

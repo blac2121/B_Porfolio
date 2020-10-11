@@ -56,6 +56,11 @@ const FeaturedPanel = styled.div`
   border: 1px solid #DFDFDF;
   background-color: #F9F9FA;
   padding-bottom: 60px;
+
+  @media (max-width: 400px) {
+    width: 95vw;
+    margin: 30px auto;
+  }
 `
 
 const SectionHeading = styled.h4`
@@ -63,25 +68,32 @@ const SectionHeading = styled.h4`
   color: #4A4C4B;
   margin: 50px 0 20px 50px;
   font-weight: 300;
+
+  @media (max-width: 400px) {
+    margin: 50px auto 10px;
+    text-align: center;
+  }  
 `
 
 const Cards = styled.div`
   display: flex;
   flex-direction: column;
+  align-content: center;
 `
 
 const PracticeCards = styled.div`
   display: flex;
   justify-content: center;
 
-
   @media (max-width: 1024px) {
     flex-direction: column;
+    align-content: center;
   }
 
   @media (max-width: 400px) {
-    align-items: center;
-  }  
+    width: 95vw;
+    margin: 30px auto;
+  }
 `
 
 const Projects = () => { 
