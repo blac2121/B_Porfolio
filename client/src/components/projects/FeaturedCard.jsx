@@ -23,8 +23,6 @@ const ProjectContainers = styled.div`
 `
 
 const ProjectDetailContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   flex-grow: 3;
   margin: 35px;
 `
