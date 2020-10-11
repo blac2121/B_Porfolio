@@ -73,6 +73,15 @@ const Cards = styled.div`
 const PracticeCards = styled.div`
   display: flex;
   justify-content: center;
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 400px) {
+    align-items: center;
+  }  
 `
 
 const Projects = () => { 

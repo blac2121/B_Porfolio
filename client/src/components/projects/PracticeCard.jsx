@@ -9,6 +9,17 @@ const ProjectContainers = styled.div`
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 3px solid #DFDFDF;
   background-color: #F9F9FA;
+
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+  }  
 `
 
 const ProjectDetailContainer = styled.div`

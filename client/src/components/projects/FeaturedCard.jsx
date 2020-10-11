@@ -9,9 +9,23 @@ const ProjectContainers = styled.div`
   margin: 40px 60px;
   border: 3px solid #DFDFDF;
   background-color: #F9F9FA;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 80vw;
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 80vw;
+  }  
+
 `
 
 const ProjectDetailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-grow: 3;
   margin: 35px;
 `
@@ -33,11 +47,22 @@ const ProjectCoverPhotos = styled.img`
   height: 225px;
   padding: 20px;
   margin: 10px;
+
+  @media (max-width: 400px) {
+    width: 225px;
+    height: 125px;
+    padding: 10px;
+    margin: 5px;
+  }  
 `
 const ImgButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media (max-width: 400px) {
+    align-items: center;
+  } 
 `
 
 const ImgContainer = styled.div`
@@ -75,6 +100,11 @@ const SeeMore = styled.button`
 
 const TagContainer = styled.div`
   display: flex;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+  }  
 `
 
 const Featured = (props) => {
