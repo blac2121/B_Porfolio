@@ -14,8 +14,9 @@ const CoverImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const Banner = styled.div`
@@ -43,27 +44,17 @@ const SubHeader = styled.h4`
   color: #1D1D1D;
 `
 
-// const FeaturedPanel = styled.div`
-//   display: flex;
-//   flex-direction: column;
-// `
 
 const FeaturedPanel = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 40px 0;
+  margin: 80px 0;
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 1px solid #DFDFDF;
   background-color: #F9F9FA;
 `
-
-// const PracticePanel = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   margin: 30px;
-// `
 
 const SectionHeading = styled.h4`
   font-size: 36px;

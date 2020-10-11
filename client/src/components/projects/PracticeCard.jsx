@@ -7,7 +7,7 @@ const ProjectContainers = styled.div`
   margin: 20px;
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-  border: 1px solid #DFDFDF;
+  border: 3px solid #DFDFDF;
   background-color: #F9F9FA;
 `
 

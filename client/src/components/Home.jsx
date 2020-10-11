@@ -17,6 +17,7 @@ const CoverImage = styled.div`
   height: 650px;
   margin: 0 auto;
   text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const Banner = styled.div`

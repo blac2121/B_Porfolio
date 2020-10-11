@@ -13,8 +13,9 @@ const CoverImage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 `
 
 const Banner = styled.div`
