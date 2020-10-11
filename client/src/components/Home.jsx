@@ -66,10 +66,19 @@ const Panels = styled.div`
 `
 
 const AboutPanel = styled.div`
+  display-flex;
   background-color: #DFE1E1;
   border: 1px solid #DFDFDF;
   border-radius: 5px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+`
+
+const AboutContainer = styled.div`
+  display: flex;
+
+  @media (max-width: 1024px) {
+    flex-direction: column-reverse;
+  } 
 `
 
 const AboutSubContainers = styled.div`
@@ -81,6 +90,10 @@ const AboutImgContainers = styled.div`
   margin-top: 225px;
   margin-right: 50px;
   background-color: #DFE1E1;
+
+  @media (max-width: 1024px) {
+    margin: 10px auto;
+  } 
 `
 
 const Title = styled.h3`
@@ -109,10 +122,6 @@ const CarouselContainer = styled.div`
     transform: scale(1.1);
     background-color: #67867B;
   }
-`
-
-const AboutContainer = styled.div`
-  display: flex;
 `
 
 const SeeMore = styled.p`
