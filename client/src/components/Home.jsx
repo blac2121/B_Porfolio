@@ -12,7 +12,7 @@ const CoverImage = styled.div`
   background: url(https://i.imgur.com/4NEYM67.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 1050px;
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
@@ -50,6 +50,7 @@ const Banner = styled.div`
   justify-content: center;
   width: 50%;
   padding-left: 20px;
+  min-height: 500px;
 
   @media (max-width: 1024px) {
     justify-content: flex-start;
