@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './shared/Layout';
+import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 
 
@@ -117,42 +118,48 @@ const Skills = () => {
       <MainContainer>
         <SectionPanel>
           <SectionHeading>Languages</SectionHeading>
-          <IconPanel>
-            <Icons className="devicon-html5-plain-wordmark colored" />
-            <Icons className="devicon-css3-plain-wordmark colored" />
-            <Icons className="devicon-javascript-plain colored" />
-            <Icons className="devicon-ruby-plain-wordmark colored" />
-            <IconTextContainer>
-              <Icons className="devicon-python-plain-wordmark" />
-              <IconText>(In Progress)</IconText>
-            </IconTextContainer>         
-          </IconPanel>
+          <Zoom>
+            <IconPanel>
+              <Icons className="devicon-html5-plain-wordmark colored" />
+              <Icons className="devicon-css3-plain-wordmark colored" />
+              <Icons className="devicon-javascript-plain colored" />
+              <Icons className="devicon-ruby-plain-wordmark colored" />
+              <IconTextContainer>
+                <Icons className="devicon-python-plain-wordmark" />
+                <IconText>(In Progress)</IconText>
+              </IconTextContainer>         
+            </IconPanel>
+          </Zoom>  
         </SectionPanel>
         <SectionPanel>     
           <SectionHeading>Frameworks / Libraries</SectionHeading>
-          <IconPanel>
-            <Icons className="devicon-react-original-wordmark colored" />
-            <Icons className="devicon-rails-plain-wordmark colored" />     
-            <Icons className="devicon-express-original-wordmark colored" />
-            <Icons className="devicon-nodejs-plain colored" />
-            <Icons className="devicon-bootstrap-plain-wordmark colored" />
-          </IconPanel> 
+          <Zoom>
+            <IconPanel>
+              <Icons className="devicon-react-original-wordmark colored" />
+              <Icons className="devicon-rails-plain-wordmark colored" />     
+              <Icons className="devicon-express-original-wordmark colored" />
+              <Icons className="devicon-nodejs-plain colored" />
+              <Icons className="devicon-bootstrap-plain-wordmark colored" />
+            </IconPanel>
+          </Zoom>   
         </SectionPanel>
         <SectionPanel>     
           <SectionHeading>Tools</SectionHeading>
-          <IconPanel>
-            <Icons className="devicon-postgresql-plain-wordmark colored" />
-            <Icons className="devicon-mongodb-plain-wordmark colored" /> 
-            <Icons className="devicon-git-plain-wordmark colored" /> 
-            <Icons className="devicon-heroku-line-wordmark colored" />
-            <Icons className="devicon-yarn-plain-wordmark colored" />
-            <Icons className="devicon-npm-original-wordmark colored" />
-            <Icons className="devicon-github-plain-wordmark colored" />
-            <Icons className="devicon-confluence-plain-wordmark colored" />
-            <Icons className="devicon-apple-original colored" />
-            <Icons className="devicon-trello-plain colored" />
-            <Icons className="devicon-slack-plain-wordmark colored" />
-          </IconPanel> 
+          <Zoom>
+            <IconPanel>
+              <Icons className="devicon-postgresql-plain-wordmark colored" />
+              <Icons className="devicon-mongodb-plain-wordmark colored" /> 
+              <Icons className="devicon-git-plain-wordmark colored" /> 
+              <Icons className="devicon-heroku-line-wordmark colored" />
+              <Icons className="devicon-yarn-plain-wordmark colored" />
+              <Icons className="devicon-npm-original-wordmark colored" />
+              <Icons className="devicon-github-plain-wordmark colored" />
+              <Icons className="devicon-confluence-plain-wordmark colored" />
+              <Icons className="devicon-apple-original colored" />
+              <Icons className="devicon-trello-plain colored" />
+              <Icons className="devicon-slack-plain-wordmark colored" />
+            </IconPanel>
+          </Zoom>  
         </SectionPanel>
       </MainContainer>
     </Layout>

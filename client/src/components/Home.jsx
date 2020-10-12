@@ -2,27 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Layout from './shared/Layout';
 import Carousel from 'react-elastic-carousel';
+import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 import profilephoto from '../assets/Brianna.jpg';
 import resumedoc from '../assets/LaCasse Resume.pdf';
 
-import Zoom from 'react-reveal/Zoom';
-
 const CoverImage = styled.div`
   display: flex;
-  // flex-direction: column;
-  // justify-content: center;
   background: url(https://i.imgur.com/4NEYM67.png);
   background-repeat: no-repeat;
   background-size: cover;
-  // height: 650px;
   height: 100vh;
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
 
   @media (max-width: 1024px) {
-    height: 400px;
     align-items: center;
   }  
 
@@ -37,6 +32,14 @@ const CoverImage = styled.div`
 
 const EmptyBanner = styled.div`
   width: 50%;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }  
+
+  @media (max-width: 400px) {
+    display: none;
+  }  
 `
 
 const Banner = styled.div`
@@ -46,16 +49,18 @@ const Banner = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
+  padding-left: 20px;
 
   @media (max-width: 1024px) {
-    height: 400px;
     justify-content: flex-start;
     background: rgba(239, 239, 242, 0.6);
+    width: 100%;
   }  
 
   @media (max-width: 400px) {
     height: 339px;
-    background: rgba(239, 239, 242, 0.7);
+    background: rgba(239, 239, 242, 0.5);
+    width: 100%;
   }  
 `
 
@@ -63,7 +68,6 @@ const HeaderTitle = styled.h3`
   font-size: 48px;
   text-align: center;
   color: white;
-
 
   @media (max-width: 1024px) {
     color: black;
@@ -87,6 +91,7 @@ const HeaderAboutText = styled.p`
 
   @media (max-width: 400px) {
     margin-top: 35px;
+    font-size: 18px;
   }  
 `
 
@@ -94,13 +99,27 @@ const HeaderButtonContainer = styled.div`
   display: flex;
   align-items: center; 
   justify-content: center;
-  // padding-right: 125px;
 
   @media (max-width: 400px) {
     flex-direction: column;   
   }  
 `
 
+const HeaderSeeMore = styled.p`
+  color: #9AB1A9;
+  cursor: pointer;
+  font-size: 24px;
+
+  :hover {
+    transform: scale(1.1);
+    color: #67867B;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1024px) {
+    color: black;
+  } 
+`
 
 const Panels = styled.div`
   margin: 50px 0;
@@ -178,25 +197,6 @@ const SeeMore = styled.p`
   }
 `
 
-const HeaderSeeMore = styled.p`
-  color: #9AB1A9;
-  cursor: pointer;
-  font-size: 24px;
-
-  :hover {
-    transform: scale(1.1);
-    color: #67867B;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 1024px) {
-    color: white;
-  } 
-
-  @media (max-width: 400px) {
-    color: black;
-  }  
-`
 
 const ButtonContainer = styled.div`
   text-align: center;
