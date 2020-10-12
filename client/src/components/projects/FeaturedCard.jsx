@@ -15,10 +15,6 @@ const ProjectContainers = styled.div`
     flex-direction: column;
     flex-direction: column-reverse;
     width: 80vw;
-    margin: 0;
-  }
-
-  @media (max-width: 400px) {
     margin: 40px auto;
   }
 `
@@ -115,11 +111,11 @@ const SeeMore = styled.button`
 
 const TagContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
-  @media (max-width: 400px) {
-    flex-direction: column;
-    align-items: center;
-  }  
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `
 
 const Featured = (props) => {

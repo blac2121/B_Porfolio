@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
   width: 20vw;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 20px;
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
@@ -15,6 +15,7 @@ const ProjectContainers = styled.div`
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    margin: 40px auto;
     width: 80vw;
   }
 
@@ -82,11 +83,11 @@ const ProjectButtons = styled.button`
 
 const TagContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
-  @media (max-width: 400px) {
-    flex-direction: column;
-    align-items: center;
-  }  
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `
 
 const Practice = (props) => {
