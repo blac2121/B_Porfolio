@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Tags from './Tags';
+import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
@@ -106,26 +107,28 @@ const Practice = (props) => {
     />
   ));
 
-  return (
+  return (  
     <ProjectContainers>
-      <ProjectDetailContainer>
-        <HeaderContainer>
-          <ProjectTitles>{props.title}</ProjectTitles>
-          <hr></hr>
-        </HeaderContainer>
-        <DetailContainer> 
-          <ProjectText>{props.goal}</ProjectText>
-          <ProjectText>{props.highlight}</ProjectText> 
-          <TagContainer>
-            {TagsJSX}
-          </TagContainer>                                              
-        </DetailContainer>
-        <ButtonContainer>
-          <a href={props.github} target="_blank"rel="noopener noreferrer">
-            <ProjectButtons>Github</ProjectButtons>
-          </a>          
-        </ButtonContainer>
-      </ProjectDetailContainer>
+      <Zoom>
+        <ProjectDetailContainer>
+          <HeaderContainer>
+            <ProjectTitles>{props.title}</ProjectTitles>
+            <hr></hr>
+          </HeaderContainer>
+          <DetailContainer> 
+            <ProjectText>{props.goal}</ProjectText>
+            <ProjectText>{props.highlight}</ProjectText> 
+            <TagContainer>
+              {TagsJSX}
+            </TagContainer>                                              
+          </DetailContainer>
+          <ButtonContainer>
+            <a href={props.github} target="_blank"rel="noopener noreferrer">
+              <ProjectButtons>Github</ProjectButtons>
+            </a>          
+          </ButtonContainer>
+        </ProjectDetailContainer>
+      </Zoom>
     </ProjectContainers>  
   )
 }
