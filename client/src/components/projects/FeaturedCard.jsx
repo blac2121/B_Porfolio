@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Tags from './Tags'
+import Tags from './Tags';
+import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
@@ -23,8 +24,6 @@ const ProjectContainers = styled.div`
 `
 
 const ProjectDetailContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   flex-grow: 3;
   margin: 35px;
 `
@@ -142,30 +141,32 @@ const Featured = (props) => {
   ));
 
   return (   
-    <ProjectContainers>
-      <ProjectDetailContainer>      
-        <ProjectTitles>{props.title}</ProjectTitles> 
-        <hr></hr>
-        <ProjectText>{props.goal}</ProjectText>
-        <ProjectText>{props.highlight}</ProjectText>
-        <TagContainer>
-          {TagsJSX}
-        </TagContainer>       
-      </ProjectDetailContainer>
-      <ImgButtonContainer>
-        <ImgContainer>
-          <ProjectCoverPhotos src={props.image} />
-        </ImgContainer>
-        <ButtonContainers>
-          <a href={props.link} target="_blank" rel="noopener noreferrer">
-            <SeeMore>Live Site</SeeMore>
-          </a>
-          <a href={props.github} target="_blank" rel="noopener noreferrer">
-            <SeeMore>Github</SeeMore>
-          </a>
-        </ButtonContainers>
-      </ImgButtonContainer>
-    </ProjectContainers>   
+    <Zoom>
+      <ProjectContainers>
+        <ProjectDetailContainer>      
+          <ProjectTitles>{props.title}</ProjectTitles> 
+          <hr></hr>
+          <ProjectText>{props.goal}</ProjectText>
+          <ProjectText>{props.highlight}</ProjectText>
+          <TagContainer>
+            {TagsJSX}
+          </TagContainer>       
+        </ProjectDetailContainer>
+        <ImgButtonContainer>
+          <ImgContainer>
+            <ProjectCoverPhotos src={props.image} />
+          </ImgContainer>
+          <ButtonContainers>
+            <a href={props.link} target="_blank" rel="noopener noreferrer">
+              <SeeMore>Live Site</SeeMore>
+            </a>
+            <a href={props.github} target="_blank" rel="noopener noreferrer">
+              <SeeMore>Github</SeeMore>
+            </a>
+          </ButtonContainers>
+        </ImgButtonContainer>
+      </ProjectContainers> 
+    </Zoom>  
   )
 }
 

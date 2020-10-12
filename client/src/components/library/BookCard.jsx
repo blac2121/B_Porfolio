@@ -1,4 +1,5 @@
 import React from 'react';
+import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 
 
@@ -38,14 +39,16 @@ const ProjectText = styled.p`
 const BookCard = (props) => {
   return (
     <ProjectDetailContainer>
-      <HeaderContainer>
-        <img src={props.img} alt={props.name}/>
-      </HeaderContainer>
-      <DetailContainer> 
-        <ProjectTitles>{props.name}</ProjectTitles>
-        <ProjectText>{props.author}</ProjectText>                          
-      </DetailContainer>
-    </ProjectDetailContainer> 
+      <Zoom>
+        <HeaderContainer>
+          <img src={props.img} alt={props.name}/>
+        </HeaderContainer>
+        <DetailContainer> 
+          <ProjectTitles>{props.name}</ProjectTitles>
+          <ProjectText>{props.author}</ProjectText>                          
+        </DetailContainer>
+      </Zoom> 
+    </ProjectDetailContainer>  
   )
 }
 
