@@ -19,6 +19,7 @@ const CoverImage = styled.div`
 
   @media (max-width: 1024px) {
     align-items: center;
+    height: 339px;
   }  
 
   @media (max-width: 400px) {
@@ -53,9 +54,10 @@ const Banner = styled.div`
   min-height: 500px;
 
   @media (max-width: 1024px) {
-    justify-content: flex-start;
+    justify-content: center;
     background: rgba(239, 239, 242, 0.6);
     width: 100%;
+    min-height: 339px;
   }  
 
   @media (max-width: 400px) {
@@ -65,6 +67,7 @@ const Banner = styled.div`
   }  
 `
 
+
 const HeaderTitle = styled.h3`
   font-size: 48px;
   text-align: center;
@@ -72,11 +75,13 @@ const HeaderTitle = styled.h3`
 
   @media (max-width: 1024px) {
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
   } 
 
   @media (max-width: 400px) {
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 32px;
   }  
 `
@@ -88,11 +93,16 @@ const HeaderAboutText = styled.p`
 
   @media (max-width: 1024px) {
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }  
 
   @media (max-width: 400px) {
-    margin-top: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 30px;
     font-size: 18px;
+    color: white;
   }  
 `
 
@@ -120,6 +130,11 @@ const HeaderSeeMore = styled.p`
   @media (max-width: 1024px) {
     color: black;
   } 
+
+  @media (max-width: 400px) {
+    margin: 10px;
+    padding: 0;
+  }  
 `
 
 const Panels = styled.div`
