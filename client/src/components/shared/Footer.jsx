@@ -34,19 +34,31 @@ const TaglineContainer = styled.div`
     margin-top: 20px;
   }  
 `
-
-const IconContainer = styled.div`
+const ContactContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 1;
   margin: 20px 50px;
   justify-content: flex-end;
 `
 
+const IconContainer = styled.div`
+  display: flex;
+`
+
 const AttributionText = styled.h6`
-  font-size: 18px;
+  font-size: 14px;
   color: #EEEEF2;
   padding: 0px;
   margin: 0px;
+`
+
+const ContactText = styled.h6`
+  font-size: 18px;
+  color: #EEEEF2;
+  padding: 0px;
+  margin: 15px;
 `
 
 const IconDiv = styled.div`
@@ -73,20 +85,23 @@ const Footer = () => {
         <AttributionText>Library Coverphoto by <a href="https://unsplash.com/@pirye?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Amelie &amp; Niklas Ohlrogge</a> on <a href="https://unsplash.com/s/photos/library?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></AttributionText>
       </AttributionContainer> 
       <TaglineContainer>        
-        <AttributionText>Designed and handcrafted in small batches by BL</AttributionText>
+        <ContactText>Designed and handcrafted in small batches by BL</ContactText>
       </TaglineContainer> 
-      <IconContainer>
-        <IconDiv>
-          <a href="https://github.com/blac2121" target="_blank" rel="noopener noreferrer" >
-            <Icons className="devicon-github-plain-wordmark" />
-          </a>     
-        </IconDiv>
-        <IconDiv>     
-          <a href="https://www.linkedin.com/in/bel1212/" target="_blank" rel="noopener noreferrer" >
-            <Icons className="devicon-linkedin-plain" />
-          </a> 
-        </IconDiv>        
-      </IconContainer>
+      <ContactContainer>
+        <ContactText>Get in touch!</ContactText>
+        <IconContainer>
+          <IconDiv>
+            <a href="https://github.com/blac2121" target="_blank" rel="noopener noreferrer" >
+              <Icons className="devicon-github-plain-wordmark" />
+            </a>     
+          </IconDiv>
+          <IconDiv>     
+            <a href="https://www.linkedin.com/in/bel1212/" target="_blank" rel="noopener noreferrer" >
+              <Icons className="devicon-linkedin-plain" />
+            </a> 
+          </IconDiv>             
+        </IconContainer>   
+      </ContactContainer>
     </FooterContainer> 
   )
 }
