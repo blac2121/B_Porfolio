@@ -4,13 +4,14 @@ import Zoom from 'react-reveal/Zoom';
 import styled from 'styled-components';
 
 const ProjectContainers = styled.div`
-  width: 20vw;
+  width: 340px;
   border-radius: 5px;
   margin: 20px;
   background-color: #F9F9FA;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
   border: 3px solid #DFDFDF;
   background-color: #F9F9FA;
+  height: 700px;
 
 
   @media (max-width: 1024px) {
@@ -31,11 +32,11 @@ const ProjectDetailContainer = styled.div`
 `
 
 const HeaderContainer = styled.div`
-  flex-grow: 1;
+  height: 100px;
 `
 
 const DetailContainer = styled.div`
-  flex-grow: 3;
+  height: 450px;
 `
 
 const ProjectTitles = styled.h4`
@@ -52,7 +53,7 @@ const ButtonContainer = styled.div`
   display: flex;
   margin: 10px;
   justify-content: center;
-  flex-grow: 1;
+  height: 100px;
 `
 
 const ProjectButtons = styled.button`
