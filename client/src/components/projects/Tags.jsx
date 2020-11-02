@@ -12,6 +12,7 @@ const TagContainer = styled.div`
   margin: 10px;
   width: 100px;
   height: 30px;
+  padding: 0px 5px;
 `
 
 const TagTitle = styled.p`
