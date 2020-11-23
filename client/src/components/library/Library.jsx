@@ -117,7 +117,8 @@ const Library = () => {
     setIndustry(sortedIndustryBooks);
     
     const businessBooks = books.filter((element) => element.fields.category === "business")
-    setBusiness(businessBooks);
+    const sortedBusinessBooks = businessBooks.sort((a,b) => a.fields.order - b.fields.order)
+    setBusiness(sortedBusinessBooks);
   }, [books]);
 
     
