@@ -113,7 +113,8 @@ const Library = () => {
 
   useEffect(() => {
     const industryBooks = books.filter((element) => element.fields.category === "industry")
-    setIndustry(industryBooks);
+    const sortedIndustryBooks = industryBooks.sort((a,b) => a.fields.order - b.fields.order)
+    setIndustry(sortedIndustryBooks);
     
     const businessBooks = books.filter((element) => element.fields.category === "business")
     setBusiness(businessBooks);
